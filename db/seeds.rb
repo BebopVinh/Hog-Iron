@@ -20,11 +20,11 @@ scabbers = Pet.create(name: "Scabbers", species:"rat", student_id:2)
 crookshanks = Pet.create(name: "Crookshanks", species:"cat", student_id:3)
 
 #Teachers
-snape = Teacher.create(name: "Severus Snape")
-minerva = Teacher.create(name: "Minerva McGonagall")
-sprout = Teacher.create(name: "Pomona Sprout")
-dumbledore = Teacher.create(name: "Albus Dumbledore")
-flitwick = Teacher.create(name: "Filius Flitwick")
+snape = Teacher.create(name: "Severus Snape", bio: "Snape is the head of Slytherin.")
+minerva = Teacher.create(name: "Minerva McGonagall", bio: "McGonagall is the headmistress of the school.")
+sprout = Teacher.create(name: "Pomona Sprout", bio: "Sprout is the head of Hufflepuff.")
+dumbledore = Teacher.create(name: "Albus Dumbledore", bio: "Dumbledore is the head of Gryffindor.")
+flitwick = Teacher.create(name: "Filius Flitwick", bio: "Flitwick is the head of Ravenclaw.")
 
 #Klasses
 potions = Klass.create(name: "Potions", teacher_id: 1)
