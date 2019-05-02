@@ -10,7 +10,12 @@
 #Students
 harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag")
 ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier")
-hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Borned", status:true, patronus:"Otter")
+hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter")
+
+#pets
+hedwig = Pet.create(name: "Hedwig", species:"owl", student_id:1)
+scabbers = Pet.create(name: "Scabbers", species:"rat", student_id:2)
+crookshanks = Pet.create(name: "Crookshanks", species:"cat", student_id:3)
 
 #Teachers
 snape = Teacher.create(name: "Severus Snape")
@@ -18,11 +23,12 @@ minerva = Teacher.create(name: "Minerva McGonagall")
 sprout = Teacher.create(name: "Pomona Sprout")
 dumbledore = Teacher.create(name: "Albus Dumbledore")
 
-
 #Klasses
 potions = Klass.create(name: "Potions", teacher_id: 1)
 transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
 herbology = Klass.create(name: "Herbology", teacher_id: 3)
+
+gryffindor = House.create(name: "Gryffindor", description:"home of the brave", head_of_house: 4)
 
 
 #Associations
