@@ -9,7 +9,7 @@
    <h3>Students Enrolled</h3>
    <ul>
       <% @klass.students.each do |student| %>
-      <li><%= render partial: 'students/student', locals: {s: student} %></li>
+      <li><%= link_to student.name, student_path(student) %></li>
       <% end %>
    </ul>
 </div>
