@@ -1,6 +1,8 @@
 class Student < ApplicationRecord
    has_many :student_klasses
    has_many :klasses, through: :student_klasses
+   validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
+   validates :heritage, presence: true
 
    def teacher(klass)
      klass.teacher
@@ -19,6 +21,6 @@ class Student < ApplicationRecord
    end
 
    def alive?
-      !!self.alive ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."  
+      !!self.alive ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."
    end
 end

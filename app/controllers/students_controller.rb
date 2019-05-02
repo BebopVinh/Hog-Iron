@@ -12,8 +12,11 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.valid?
       @student.save
+      flash[:notice] = "Welcome to Hogwarts, #{@student.name}!"
       redirect_to student_path(@student)
     else
+      flash[:alert] = @student.errors.full_messages
+
       render :new
     end
   end
