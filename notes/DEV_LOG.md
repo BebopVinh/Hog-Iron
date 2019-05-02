@@ -1,14 +1,25 @@
 # To-Do's
-* Views helpers: lab refactoring views with helpers?
-link: https://learn.co/tracks/online* software* engineering* full* time/rails/refactoring* with* helpers* and* model* methods/refactoring* views* with* helpers
 
-* Adding other tables: Houses, Pets, Teams
-* Add necessary views for new tables
+
+BACKEND
+*Students table - add graduation year.
+*Views helpers: lab refactoring views with helpers?
+link: https://learn.co/tracks/online*
+* Add House table.
+* Add other tables: Houses, Pets, Teams
 * Log in via Google/ facebook
 * Password Authentication
-* Fork your own copy and try styling with Bootstrap!
+
+
+
+
+
+
+* Add necessary views for new tables
 * Add more Hogwartsian messages to controllers.
-* Add pics?
+
+FRONT-END TEMPLATE
+* Fork your own copy and try styling with Bootstrap!
 
 STARTED May 1st.
 * layout
