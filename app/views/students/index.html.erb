@@ -1,15 +1,16 @@
 
 
-<h1>Our Students</h1>
+<div style="text-align:center">
+<h1>Our Students</h1><br>
 
 <% @houses.each do |house| %>
+  <br><br>
   <h3><%= link_to house.name, house_path(house) %></h3>
-  <ul>
   <% house.students.each do |student| %>
-    <li><p><%= link_to student.name, student_path(student)%><p></li>
+    <p><%= link_to student.name, student_path(student)%><p>
   <% end %>
-  </ul>
 <% end %>
 
 
 <%= button_to "New Student", new_student_path, method: :get %>
+</div>
