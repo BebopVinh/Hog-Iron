@@ -23,6 +23,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    flash[:notice] = "Accio .... "
   end
 
   def edit
@@ -32,14 +33,19 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
     if @student.update(student_params)
+      flash[:notice] = "Successfully updated #{@student.name}!"
       redirect_to student_path(@student)
     else
+      flash[:alert] = @student.errors.full_messages
       render :edit
     end
   end
 
   def destroy
-    Student.find(params[:id]).destroy
+    @student = Student.find(params[:id])
+    @name = @student.name
+    @student.destroy
+    flash[:notice] = "Avada Kedavra! Let this #{@name} be destroyed."
     redirect_to students_path
   end
 

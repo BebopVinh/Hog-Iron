@@ -6,10 +6,11 @@ link: https://learn.co/tracks/online* software* engineering* full* time/rails/re
 *** Partials
 * layout
 * Adding other tables
-* Validations
+*** Validations
+*** Flash errors for students
 * Log in via Google/ facebook
 * Password Authentication
-* next meeting 10am PST May 1
+
 
 
 
