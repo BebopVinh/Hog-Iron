@@ -5,8 +5,9 @@ BACKEND
 *Students table - add graduation year.
 *Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online*
-* Add House table.
-* Add other tables: Houses, Pets, Teams
+
+* add helper methods for pets and teams
+* Add other tables: Teams
 * Log in via Google/ facebook
 * Password Authentication
 
@@ -20,6 +21,12 @@ link: https://learn.co/tracks/online*
 
 FRONT-END TEMPLATE
 * Fork your own copy and try styling with Bootstrap!
+
+###May 2nd
+* DONE Add House and Pet tables
+* Changed student attributes
+* All relationships working
+
 
 STARTED May 1st.
 * layout

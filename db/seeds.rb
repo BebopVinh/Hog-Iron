@@ -8,9 +8,11 @@
 
 
 #Students
-harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag")
-ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier")
-hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter")
+harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag", house_id:1)
+ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier", house_id:1)
+hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter", house_id:1)
+malfoy = Student.create(name: "Draco Malfoy", heritage:"Wizard", status:true, patronus:"", house_id:2)
+
 
 #pets
 hedwig = Pet.create(name: "Hedwig", species:"owl", student_id:1)
@@ -22,16 +24,21 @@ snape = Teacher.create(name: "Severus Snape")
 minerva = Teacher.create(name: "Minerva McGonagall")
 sprout = Teacher.create(name: "Pomona Sprout")
 dumbledore = Teacher.create(name: "Albus Dumbledore")
+flitwick = Teacher.create(name: "Filius Flitwick")
 
 #Klasses
 potions = Klass.create(name: "Potions", teacher_id: 1)
 transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
 herbology = Klass.create(name: "Herbology", teacher_id: 3)
 
-gryffindor = House.create(name: "Gryffindor", description:"home of the brave", head_of_house: 4)
+gryffindor = House.create(name: "Gryffindor", description:"home of the brave", teacher_id: 4)
+slytherin = House.create(name: "Slytherin", description:"home of the snakes", teacher_id: 1)
+hufflepuff = House.create(name: "Hufflepuff", description:"home of the rest", teacher_id: 3)
+ravenclaw = House.create(name: "Ravenclaw", description:"home of the brains", teacher_id: 5)
 
 
 #Associations
 potions.students << [harry, ron, hermione]
 transfiguration.students << [harry, ron, hermione]
 herbology.students << [harry, ron, hermione]
+slytherin.students << malfoy

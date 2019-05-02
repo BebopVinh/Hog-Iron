@@ -1,6 +1,6 @@
 class Student < ApplicationRecord
   has_many :pets
-  belongs_to :house
+  belongs_to :house, optional: true
   has_many :student_klasses
   has_many :klasses, through: :student_klasses
    validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
