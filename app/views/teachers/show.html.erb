@@ -1,0 +1,9 @@
+<h1><%= @teacher.name %> </h1>
+  <% @teacher.klasses.each do |k| %>
+    <h3><%= k.name %> Students</h3>
+    <ol>
+    <% k.students.each do |s|  %>
+      <li>  <%= s.name %>  </li>
+      <% end %>
+    </ol>
+  <% end %>
