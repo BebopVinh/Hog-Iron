@@ -8,9 +8,9 @@
 
 
 #Students
-harry = Student.create(name: "Harry Potter", heritage:"Wizard", alive:true, patronus:"Stag")
-ron = Student.create(name: "Ron Weasley", heritage:"Wizard", alive:true, patronus:"Jack Russell Terrier")
-hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Borned", alive:true, patronus:"Otter")
+harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag")
+ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier")
+hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Borned", status:true, patronus:"Otter")
 
 #Teachers
 snape = Teacher.create(name: "Severus Snape")

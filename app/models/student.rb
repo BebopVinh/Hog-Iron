@@ -20,7 +20,7 @@ class Student < ApplicationRecord
      @heritages = %w(Pure-Blood Half-Blood Muggle-Born Squib Muggle)
    end
 
-   def alive?
-      !!self.alive ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."
+   def status?
+      !!self.status ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."
    end
 end
