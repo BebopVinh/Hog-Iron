@@ -8,7 +8,6 @@ class StudentsController < ApplicationController
   end
 
   def create
-
     @student = Student.new(student_params)
     if @student.valid?
       @student.save
@@ -16,7 +15,6 @@ class StudentsController < ApplicationController
       redirect_to student_path(@student)
     else
       flash[:alert] = @student.errors.full_messages
-
       render :new
     end
   end

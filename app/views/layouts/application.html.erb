@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>HogIron</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+<head>
+  <title>Hog-Iron</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<div class="jumbotron text-center">
+  <h1>Welcome to Hog-Iron</h1>
+</div>
 
-  <body>
-    <%= yield %>
-  </body>
+<div class="row">
+  <div class="col-sm-4">
+
+  <%= yield %>
+
+  </div>
+</div>
+
+
+</body>
 </html>

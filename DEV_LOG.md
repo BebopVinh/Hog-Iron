@@ -1,17 +1,16 @@
 # To-Do's
-*** Views setup
 * Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online* software* engineering* full* time/rails/refactoring* with* helpers* and* model* methods/refactoring* views* with* helpers
-
-*** Partials
 * layout
 * Adding other tables
-*** Validations
-*** Flash errors for students
 * Log in via Google/ facebook
 * Password Authentication
 
-
+DONE
+* Views setup
+* Validations
+* Flash errors for students
+* Partials
 
 
 ### April 30th
