@@ -1,9 +1,15 @@
 
-<div class="container-fluid">
-<h1>List of Students</h1>
-<% @students.each do |student| %>
-  <%= render partial: 'student', locals: { s: student }%>
+
+<h1>Our Students</h1>
+
+<% @houses.each do |house| %>
+  <h3><%= link_to house.name, house_path(house) %></h3>
+  <ul>
+  <% house.students.each do |student| %>
+    <li><p><%= link_to student.name, student_path(student)%><p></li>
+  <% end %>
+  </ul>
 <% end %>
 
+
 <%= button_to "New Student", new_student_path, method: :get %>
-</div>
