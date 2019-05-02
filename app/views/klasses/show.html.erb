@@ -1,0 +1,19 @@
+<h1><%= @klass.name %></h1>
+
+<div>
+   <h3>Taught by</h3><br>
+   <p><%= @klass.teacher.name %></p>
+</div>
+
+<div>
+   <h3>Students Enrolled</h3>
+   <ul>
+      <% @klass.students.each do |student| %>
+      <li><%= render partial: 'students/student', locals: {s: student} %></li>
+      <% end %>
+   </ul>
+</div>
+
+<div>
+   <%= button_to "Enroll", "/klass/:student_id/enroll", method: :get %>
+</div>

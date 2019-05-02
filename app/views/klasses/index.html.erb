@@ -1,0 +1,6 @@
+<ul>
+<% @klasses.each do |klass| %>
+   <li><%= render partial: 'klass', locals: {klass: klass} %></li>
+<% end %>
+   
+</ul>
