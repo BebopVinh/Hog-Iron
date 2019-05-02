@@ -39,6 +39,10 @@ class KlassesController < ApplicationController
     redirect_to klasses_path
   end
 
+  def enroll
+    byebug
+  end
+
   private
 
   def klass_params
