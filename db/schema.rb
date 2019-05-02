@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_30_180217) do
+ActiveRecord::Schema.define(version: 2019_05_02_004211) do
 
   create_table "klasses", force: :cascade do |t|
     t.string "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_180217) do
     t.integer "age"
     t.string "heritage"
     t.string "pet"
-    t.boolean "alive"
+    t.boolean "status"
     t.string "patronus"
     t.integer "house_id"
     t.integer "team_id"

@@ -10,16 +10,16 @@
 
 <%= form_for student do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name%>
+  <%= f.text_field :name %>
   <br>
   <%= f.label :heritage %>
   <%= f.select :heritage, Student.heritages %>
   <br>
   <%= f.label :alive, "Alive at End of Book Series?" %>
-  <%= f.check_box :alive%>
+  <%= f.check_box :alive %>
   <br>
   <%= f.label :patronus %>
-  <%= f.text_field :patronus%>
+  <%= f.text_field :patronus %>
   <br>
   <%= f.label :klass_ids, "Classes" %>
   <%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name%>
