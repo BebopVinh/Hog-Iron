@@ -1,6 +1,6 @@
 <h1>Our Teachers</h1>
 <ul>
   <% @teachers.each do |t| %>
-    <li><%= t.name %> - <%= t.bio %> </li>
+    <li><%= link_to t.name, teacher_path(t) %>: <%= t.bio %> </li>
   <% end %>
 </ul>
