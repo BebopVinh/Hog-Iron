@@ -5,5 +5,7 @@ class HousesController < ApplicationController
 
   def show
     @house = House.find_by_id(params[:id])
+    @head_of_house = @house.teacher
+    @head_of_house_name = @house.teacher_name
   end
 end
