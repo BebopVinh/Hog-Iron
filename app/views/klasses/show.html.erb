@@ -2,7 +2,7 @@
 
 <div>
    <h3>Taught by</h3><br>
-   <p><%= @klass.teacher.name %></p>
+   <p><%= link_to @teacher.name, teacher_path(@teacher) %></p>
 </div>
 
 <div>

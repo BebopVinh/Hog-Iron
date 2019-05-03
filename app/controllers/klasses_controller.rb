@@ -19,6 +19,7 @@ class KlassesController < ApplicationController
 
   def show
     @klass = Klass.find(params[:id])
+    @teacher = @klass.teacher
   end
 
   def edit
