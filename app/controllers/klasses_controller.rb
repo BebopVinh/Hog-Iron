@@ -40,7 +40,6 @@ class KlassesController < ApplicationController
   end
 
   def enroll
-    byebug
   end
 
   private
