@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all.sort_by(&:name)
+    #@students = Student.all.sort_by(&:name)
+    @houses = House.all.sort_by(&:name)
   end
 
   def new
@@ -20,7 +21,8 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.find_by_id(params[:id])
+    @house = @student.house
     flash[:notice] = "Accio .... "
   end
 
