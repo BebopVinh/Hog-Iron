@@ -2,8 +2,8 @@
 
 
 BACKEND
-*Students table - add graduation year.
-*Views helpers: lab refactoring views with helpers?
+* Students table - add graduation year.
+* Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online*
 
 * add helper methods for pets and teams
