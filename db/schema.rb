@@ -55,14 +55,14 @@ ActiveRecord::Schema.define(version: 2019_05_02_185854) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "graduation_year"
-    t.string "bio"
+    t.text "bio"
   end
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "bio"
+    t.text "bio"
   end
 
 end
