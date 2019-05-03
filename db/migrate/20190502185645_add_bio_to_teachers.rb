@@ -1,5 +1,5 @@
 class AddBioToTeachers < ActiveRecord::Migration[5.2]
   def change
-    add_column :teachers, :bio, :string
+    add_column :teachers, :bio, :text
   end
 end
