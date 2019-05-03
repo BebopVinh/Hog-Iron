@@ -1,0 +1,25 @@
+<h1>Hogwarts School of Witchcraft and Wizardry</h1>
+<!-- NAV BAR -->
+<h4><%= link_to "Students", students_path %></h4>
+<h4><%= link_to "Admissions", new_student_path %></h4>
+<h4><%= link_to "Faculty", teachers_path %></h4>
+<h4><%= link_to "Courses", klasses_path %></h4>
+
+<h4><%= link_to "Houses", houses_path %></h4>
+
+<h4><%= "Log In" %></h4>
+
+<!-- -->
+
+
+<select>
+  <option value="">Houses</option>
+  <% @houses.each do |house| %>
+    <option><%= link_to house.name, houses_path(house) %></option>
+  <% end %>
+</select>
+
+<%= form_tag('/houses/:id', method: :get)  %>
+  <%= select_tag 'house_id', options_for_select(@houses.collect{ |house| [house.name, house.id] }.insert(0, "Houses")) %>
+  <br><br>
+  <%= submit_tag %>
