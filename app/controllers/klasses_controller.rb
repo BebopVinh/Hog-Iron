@@ -19,6 +19,7 @@ class KlassesController < ApplicationController
 
   def show
     @klass = Klass.find(params[:id])
+    @teacher = @klass.teacher
   end
 
   def edit
@@ -37,6 +38,9 @@ class KlassesController < ApplicationController
   def destroy
     klass.find(params[:id]).destroy
     redirect_to klasses_path
+  end
+
+  def enroll
   end
 
   private

@@ -20,16 +20,23 @@ scabbers = Pet.create(name: "Scabbers", species:"rat", student_id:2)
 crookshanks = Pet.create(name: "Crookshanks", species:"cat", student_id:3)
 
 #Teachers
-snape = Teacher.create(name: "Severus Snape", bio: "Snape is the head of Slytherin.")
+snape = Teacher.create(
+   name: "Severus Snape", 
+   bio: "Professor Severus Snape is a Half-Blood wizard serving as Potions Master (1981-1996), Defense Against the Dark Arts professor (1996-1997), 
+   and Headmaster (1997-1998) of the Hogwarts School of Witchcraft and Wizardry as well as a member of the Order of the Phoenix and a Death Eater." 
+   )
+
 minerva = Teacher.create(name: "Minerva McGonagall", bio: "McGonagall is the headmistress of the school.")
 sprout = Teacher.create(name: "Pomona Sprout", bio: "Sprout is the head of Hufflepuff.")
 dumbledore = Teacher.create(name: "Albus Dumbledore", bio: "Dumbledore is the head of Gryffindor.")
 flitwick = Teacher.create(name: "Filius Flitwick", bio: "Flitwick is the head of Ravenclaw.")
 
+
 #Klasses
 potions = Klass.create(name: "Potions", teacher_id: 1)
 transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
 herbology = Klass.create(name: "Herbology", teacher_id: 3)
+defense = Klass.create(name: "Defense Against the Dark Arts", teacher_id: 1)
 
 #Houses
 gryffindor = House.create(name: "Gryffindor", description:"home of the brave", teacher_id: 4)

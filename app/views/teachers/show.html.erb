@@ -1,11 +1,25 @@
-<h1><%= @teacher.name %> </h1>
-  <% @teacher.klasses.each do |k| %>
-    <h3><%= k.name %> Students</h3>
+<h1>About <%= @teacher.name %></h1>
+
+<div>
+   <h3>Biography</h3>
+   <p><%= @teacher.bio %></p>
+</div>
+
+<div>
+   <h3>Classes:</h3>
+   <ul>
+      <% @klasses.each do |klass| %>
+      <li><%= link_to klass.name, klass_path(klass) %></li>
+        <h3><%= k.name %> Students</h3>
     <ol>
     <% k.students.each do |s|  %>
       <li>  <%= s.name %>  </li>
       <% end %>
     </ol>
   <% end %>
+
+      <% end %>
+   </ul>
+</div>
 
 <%= link_to "Back To Our Teachers", teachers_path %> 
