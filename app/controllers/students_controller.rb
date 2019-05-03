@@ -41,6 +41,11 @@ class StudentsController < ApplicationController
     end
   end
 
+  def klasses
+    @student = Student.find(params[:id])
+    @klasses = @student.klasses 
+  end
+
   def destroy
     @student = Student.find(params[:id])
     @name = @student.name
