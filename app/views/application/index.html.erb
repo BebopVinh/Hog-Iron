@@ -1,3 +1,10 @@
+<style media="screen">
+  body {
+    background:url(http://images.fandango.com/images/fandangoblog/hogwartsschoolpotter.jpg) no-repeat !important;
+    padding-top:100px;
+    background-size:cover;
+  }
+</style>
 <h1>Hogwarts School of Witchcraft and Wizardry</h1>
 <!-- NAV BAR -->
 <h4><%= link_to "Students", students_path %></h4>
@@ -12,14 +19,15 @@
 <!-- -->
 
 
-<select>
-  <option value="">Houses</option>
-  <% @houses.each do |house| %>
-    <option><%= link_to house.name, houses_path(house) %></option>
-  <% end %>
-</select>
 
-<%= form_tag('/houses/:id', method: :get)  %>
-  <%= select_tag 'house_id', options_for_select(@houses.collect{ |house| [house.name, house.id] }.insert(0, "Houses")) %>
-  <br><br>
-  <%= submit_tag %>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select a House
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <% @houses.each do |house| %>
+      <%= link_to house.name, house_path(house), class:"dropdown-item" %>
+    <% end %>
+  </div>
+</div>
