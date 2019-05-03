@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   get '/hogwarts', to: 'application#index'
+
   get '/', to: 'application#index'
 
   #Custom enroll route for students and classes
