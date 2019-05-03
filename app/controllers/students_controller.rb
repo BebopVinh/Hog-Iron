@@ -22,6 +22,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by_id(params[:id])
+    @student_classes_route = "#{student_path(@student)}/classes"
     @house = @student.house
     flash[:notice] = "Accio .... "
   end
@@ -43,7 +44,7 @@ class StudentsController < ApplicationController
 
   def klasses
     @student = Student.find(params[:id])
-    @klasses = @student.klasses 
+    @klasses = @student.klasses
   end
 
   def destroy
