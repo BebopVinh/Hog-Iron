@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_02_194748) do
+ActiveRecord::Schema.define(version: 2019_05_03_182739) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -54,14 +54,15 @@ ActiveRecord::Schema.define(version: 2019_05_02_194748) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "graduation_year"
-    t.text "bio"
+    t.string "bio"
+    t.string "password_digest"
   end
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "bio"
+    t.string "bio"
   end
 
 end

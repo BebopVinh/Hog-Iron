@@ -3,8 +3,9 @@ class Student < ApplicationRecord
   belongs_to :house, optional: true
   has_many :student_klasses
   has_many :klasses, through: :student_klasses
-   validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
-   validates :heritage, presence: true
+  validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
+  validates :heritage, presence: true
+  has_secure_password
 
    def teacher(klass)
      klass.teacher

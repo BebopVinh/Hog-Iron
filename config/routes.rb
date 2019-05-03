@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   get '/', to: 'application#index'
 
   #Custom enroll route for students and classes
-  get 'klasses/:student_id/enroll', to: "klasses#enroll"
+  get '/klasses/:student_id/enroll', to: "klasses#enroll"
+
+  get '/signup', to: "students#new"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
