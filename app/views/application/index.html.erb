@@ -5,29 +5,34 @@
     background-size:cover;
   }
 </style>
-<h1>Hogwarts School of Witchcraft and Wizardry</h1>
-<!-- NAV BAR -->
-<h4><%= link_to "Students", students_path %></h4>
-<h4><%= link_to "Admissions", new_student_path %></h4>
-<h4><%= link_to "Faculty", teachers_path %></h4>
-<h4><%= link_to "Courses", klasses_path %></h4>
 
-<h4><%= link_to "Houses", houses_path %></h4>
+<div style= "color:grey; text-align:center">
+  <h1>Hogwarts School of Witchcraft and Wizardry</h1><br><br><br>
 
-<h4><%= "Log In" %></h4>
+  <!-- NAV BAR -->
+<div style=text-align:center">
+  <h4><%= link_to "Students", students_path %></h4>
+  <h4><%= link_to "Admissions", new_student_path %></h4>
+  <h4><%= link_to "Faculty", teachers_path %></h4>
+  <h4><%= link_to "Courses", klasses_path %></h4><br>
+
 
 <!-- -->
-
-
-
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select a House
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <% @houses.each do |house| %>
-      <%= link_to house.name, house_path(house), class:"dropdown-item" %>
-    <% end %>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select a House
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <% @houses.each do |house| %>
+        <%= link_to house.name, house_path(house), class:"dropdown-item" %>
+      <% end %>
+      <div class="dropdown-divider">
+      <%= link_to "All Houses", houses_path, class:"dropdown-item"%><br>
+    </div>
   </div>
+
+
+
+
 </div>
+<!-- </div>ends centering -->

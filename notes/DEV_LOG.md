@@ -9,8 +9,7 @@ link: https://learn.co/tracks/online*
 * add helper method and teams
 * Add other tables: Teams
 * Log in via Google/ facebook
-* Password Authentication*
-
+* Password Authentication
 * Add images to teachers table
 * Add views for pets
 
