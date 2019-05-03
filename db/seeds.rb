@@ -8,7 +8,7 @@
 
 
 #Students
-harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag", house_id:1)
+harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag", house_id:1, bio:"The boy who lived.")
 ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier", house_id:1)
 hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter", house_id:1)
 malfoy = Student.create(name: "Draco Malfoy", heritage:"Wizard", status:true, patronus:"", house_id:2)
@@ -31,6 +31,7 @@ potions = Klass.create(name: "Potions", teacher_id: 1)
 transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
 herbology = Klass.create(name: "Herbology", teacher_id: 3)
 
+#Houses
 gryffindor = House.create(name: "Gryffindor", description:"home of the brave", teacher_id: 4)
 slytherin = House.create(name: "Slytherin", description:"home of the snakes", teacher_id: 1)
 hufflepuff = House.create(name: "Hufflepuff", description:"home of the rest", teacher_id: 3)

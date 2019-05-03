@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.find_by_id(params[:id])
     @house = @student.house
     flash[:notice] = "Accio .... "
   end

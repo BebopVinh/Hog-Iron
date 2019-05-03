@@ -1,11 +1,11 @@
-<% if flash[:notice] %>
+<div style="margin-left: 400px">
+  <% if flash[:notice] %>
    <div class="notice">
-     <font size="50" color="purple"><%= flash[:notice] %></font></div>
+     <font size="60" color="purple"><%= flash[:notice] %></font></div>
  <% end %>
 
-<h1><%=@student.name%> </h1>
 <%= render partial: 'student', locals: { s: @student, house: @house }%>
-
 
 <%= button_to "Edit Student",  edit_student_path(@student), method: :get%>
 <%= button_to "Delete Student",  student_path(@student), method: :delete%>
+</div>
