@@ -6,5 +6,7 @@
 
 <%= render partial: 'student', locals: { s: @student, house: @house }%>
 
+<%= button_to "Add or Drop Classes",  student_path(@student.id), method: :get%>
+
 <%= button_to "Edit Student",  edit_student_path(@student), method: :get%>
 <%= button_to "Delete Student",  student_path(@student), method: :delete%>

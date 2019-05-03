@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :klasses
   resources :students
 
+  get '/students/:id/classes', to: 'students#klasses'
+
 
   get '/hogwarts', to: 'application#index'
 
@@ -14,13 +16,12 @@ Rails.application.routes.draw do
 
   get '/signup', to: "students#new"
 
+
   get '/login', to: "application#login"
 
   post   '/login',   to: 'sessions#create'
 
   delete '/logout',  to: 'sessions#destroy'
-
-  get '/students/:id/classes', to: 'students#klasses'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
