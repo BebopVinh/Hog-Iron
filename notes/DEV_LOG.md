@@ -7,10 +7,11 @@ BACKEND
 * Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online*
 
+* add code to enrollment form
 * add helper method and teams
 * Add other tables: Teams
 * Log in via Google/ facebook
-* Password Authentication
+
 * Add images to teachers table
 * Add views for pets
 
@@ -18,6 +19,11 @@ link: https://learn.co/tracks/online*
 
 FRONT-END TEMPLATE
 * Fork your own copy and try styling with Bootstrap!
+
+
+###May 3rd
+* DONE Password Authentication
+* DONE Generated user table and validations 
 
 ###May 2nd
 * DONE Students table - add graduation year.
