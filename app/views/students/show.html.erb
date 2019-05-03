@@ -1,4 +1,4 @@
-<div style="margin-left: 400px">
+
   <% if flash[:notice] %>
    <div class="notice">
      <font size="60" color="purple"><%= flash[:notice] %></font></div>
@@ -8,4 +8,3 @@
 
 <%= button_to "Edit Student",  edit_student_path(@student), method: :get%>
 <%= button_to "Delete Student",  student_path(@student), method: :delete%>
-</div>
