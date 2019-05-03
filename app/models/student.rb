@@ -5,6 +5,7 @@ class Student < ApplicationRecord
   has_many :klasses, through: :student_klasses
   validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
   validates :heritage, presence: true
+  validates :username, presence: true, uniqueness: true
   has_secure_password
 
    def teacher(klass)
