@@ -1,5 +1,6 @@
 # To-Do's
-
+https://hangouts.google.com/call/MDWhdAkIflfHtSf_RXsuAEEE
+MEET tmrw 2pm EST May 3.
 
 BACKEND
 

@@ -7,17 +7,20 @@
 </style>
 
 <div style= "color:grey; text-align:center">
-  <h1>Hogwarts School of Witchcraft and Wizardry</h1><br><br><br>
+  <h1>Hogwarts School of Witchcraft and Wizardry</h1></div>
+  <br>
+  <br>
+  <br>
 
   <!-- NAV BAR -->
-<div style=text-align:center">
+<div style="text-align:right">
   <h4><%= link_to "Students", students_path %></h4>
   <h4><%= link_to "Admissions", new_student_path %></h4>
   <h4><%= link_to "Faculty", teachers_path %></h4>
   <h4><%= link_to "Courses", klasses_path %></h4><br>
 
 
-<!-- -->
+  <!-- House dropdown -->
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Select a House
@@ -33,6 +36,4 @@
 
 
 
-
-</div>
-<!-- </div>ends centering -->
+</div><!-- ends centering -->
