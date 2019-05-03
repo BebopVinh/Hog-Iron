@@ -2,30 +2,30 @@
 
 
 BACKEND
-* Students table - add graduation year.
+
 * Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online*
 
-* add helper methods for pets and teams
+* add helper method and teams
 * Add other tables: Teams
 * Log in via Google/ facebook
-* Password Authentication
+* Password Authentication*
 
+* Add images to teachers table
+* Add views for pets
 
-
-
-
-
-* Add necessary views for new tables
 * Add more Hogwartsian messages to controllers.
 
 FRONT-END TEMPLATE
 * Fork your own copy and try styling with Bootstrap!
 
 ###May 2nd
+* DONE Students table - add graduation year.
+* DONE Add necessary views for teachers
 * DONE Add House and Pet tables
-* Changed student attributes
-* All relationships working
+* DONE Changed student attributes
+* DONE All relationships working
+* DONE Student Helper method display_pet
 
 
 STARTED May 1st.
