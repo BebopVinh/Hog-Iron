@@ -2,5 +2,6 @@
 <ul>
   <% @teachers.each do |t| %>
     <li><%= link_to t.name, teacher_path(t) %>: <%= t.bio %> </li>
+    <br><br>
   <% end %>
 </ul>
