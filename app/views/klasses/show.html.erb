@@ -1,0 +1,19 @@
+<h1><%= @klass.name %></h1>
+
+<div>
+   <h3>Taught by</h3><br>
+   <p><%= link_to @teacher.name, teacher_path(@teacher) %></p>
+</div>
+
+<div>
+   <h3>Students Enrolled</h3>
+   <ul>
+      <% @klass.students.each do |student| %>
+      <li><%= link_to student.name, student_path(student) %></li>
+      <% end %>
+   </ul>
+</div>
+
+<div>
+   <%= button_to "Enroll", "/klass/:student_id/enroll", method: :get %>
+</div>

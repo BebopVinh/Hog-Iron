@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :klasses
   resources :students
 
+
   get '/hogwarts', to: 'application#index'
   get '/', to: 'application#index'
+
+  #Custom enroll route for students and classes
+  get 'klasses/:student_id/enroll', to: "klasses#enroll"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

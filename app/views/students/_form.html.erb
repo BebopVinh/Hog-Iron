@@ -8,21 +8,33 @@
    </div>
  <% end %>
 
+ <p>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
+
 <%= form_for student do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <br>
+  <br><br>
   <%= f.label :heritage %>
   <%= f.select :heritage, Student.heritages %>
-  <br>
-  <%= f.label :status, "Alive at End of Book Series?" %>
-  <%= f.check_box :status %>
-  <br>
-  <%= f.label :patronus %>
-  <%= f.text_field :patronus %>
-  <br>
+  <br><br>
   <%= f.label :klass_ids, "Classes" %>
   <%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name%>
-  <br>
+  <br><br>need to add pet id or nested form for new pet<br><br>
+
+  <%= f.label :patronus %>
+  <%= f.text_field :patronus %>
+  <br><br>
+  <%= f.label :graduation_year, "Class of:" %>
+  <%= f.text_field :graduation_year %>
+  <br><br>
+  <%= f.label :status, "Alive at End of Book Series?" %>
+  <%= f.check_box :status %>
+  <br><br>
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+  <br><br>
+
+
+  <br><br>
   <%= f.submit %>
 <% end %>

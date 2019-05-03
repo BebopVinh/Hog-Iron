@@ -1,12 +1,13 @@
+
+
+<h1><%=s.name%> </h1>
 <ul>
-    <li>Name: <%= link_to s.name, student_path(s)%> </li>
-    <li>House: <%= s.house.name %></li>
-    <li>Heritage: <%= s.heritage %> </li>
-    <li>Status: <%= s.status?%> </li>
-    <li>Patronus: <%= s.patronus%> </li>
-    <li>Classes: <%= s.klasses_names %> </li>
-    <li>Pet: <%= s.pet.name %></li>
-    <li>Graduates: <%= s.graduation_year %></li>
-    <li>Bio: <%= s.bio %></li>    
-    <li></li>
+    <li>House: <%= link_to s.house.name, house_path(s.house) %></li><br>
+    <li>Heritage: <%= s.heritage %> </li><br>
+    <li>Classes: <% s.klasses_names %></li><br>
+    <li>Pet: <%= display_pet(s) %></li><br>
+    <li>Patronus: <%= s.patronus %> </li><br>
+    <li>Graduates: <%= s.graduation_year %></li><br>
+    <li>Alive at end of series? <%= s.status %> </li><br>
+    <li>Bio: <%= s.bio %></li><br>
 </ul>
