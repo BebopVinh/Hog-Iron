@@ -10,7 +10,16 @@
    <ul>
       <% @klasses.each do |klass| %>
       <li><%= link_to klass.name, klass_path(klass) %></li>
+        <h3><%= k.name %> Students</h3>
+    <ol>
+    <% k.students.each do |s|  %>
+      <li>  <%= s.name %>  </li>
+      <% end %>
+    </ol>
+  <% end %>
+
       <% end %>
    </ul>
 </div>
 
+<%= link_to "Back To Our Teachers", teachers_path %> 
