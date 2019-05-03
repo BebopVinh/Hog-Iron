@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2019_05_03_183827) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "graduation_year"
-    t.string "bio"
+    t.text "bio"
     t.string "password_digest"
     t.string "username"
   end
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2019_05_03_183827) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "bio"
+    t.text "bio"
   end
 
 end
