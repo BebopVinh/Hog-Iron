@@ -1,0 +1,16 @@
+<h1>About <%= @teacher.name %></h1>
+
+<div>
+   <h3>Biography</h3>
+   <p><%= @teacher.bio %></p>
+</div>
+
+<div>
+   <h3>Classes:</h3>
+   <ul>
+      <% @klasses.each do |klass| %>
+      <li><%= link_to klass.name, klass_path(klass) %></li>
+      <% end %>
+   </ul>
+</div>
+
