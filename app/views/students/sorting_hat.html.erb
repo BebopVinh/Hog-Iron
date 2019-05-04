@@ -7,7 +7,6 @@
 <br>
 <%= form_for @student do |f| %>
   <h3>Which of these describes you?</h3>
-  <% binding.pry %>
   <%= f.select :trait, @student.all_traits %>
   <%= f.submit "Sort Me"%>
 <% end %>
