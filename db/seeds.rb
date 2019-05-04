@@ -13,7 +13,6 @@ ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patron
 hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter", house_id:1)
 malfoy = Student.create(name: "Draco Malfoy", heritage:"Wizard", status:true, patronus:"", house_id:2)
 
-
 #pets
 hedwig = Pet.create(name: "Hedwig", species:"owl", student_id:1)
 scabbers = Pet.create(name: "Scabbers", species:"rat", student_id:2)
@@ -43,7 +42,6 @@ gryffindor = House.create(name: "Gryffindor", description:"home of the brave", t
 slytherin = House.create(name: "Slytherin", description:"home of the snakes", teacher_id: 1)
 hufflepuff = House.create(name: "Hufflepuff", description:"home of the rest", teacher_id: 3)
 ravenclaw = House.create(name: "Ravenclaw", description:"home of the brains", teacher_id: 5)
-
 
 #Associations
 potions.students << [harry, ron, hermione]

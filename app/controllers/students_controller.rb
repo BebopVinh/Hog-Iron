@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
+
+
   def index
-    #@students = Student.all.sort_by(&:name)
     @houses = House.all.sort_by(&:name)
   end
 
@@ -13,7 +14,8 @@ class StudentsController < ApplicationController
     if @student.valid?
       @student.save
       flash[:notice] = "Welcome to Hogwarts, #{@student.name}!"
-      redirect_to student_path(@student)
+      render :sorting_hat
+      #redirect_to student_path(@student)
     else
       flash[:alert] = @student.errors.full_messages
       render :new
@@ -33,6 +35,10 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
+    if @student.house_id == nil
+      sort_student(@student)
+    end
+
     if @student.update(student_params)
       flash[:notice] = "Successfully updated #{@student.name}!"
       redirect_to student_path(@student)
@@ -47,6 +53,10 @@ class StudentsController < ApplicationController
     @klasses = @student.klasses
   end
 
+  def sorting_hat
+    @student = Student.find(params[:id])
+  end
+
   def destroy
     @student = Student.find(params[:id])
     @name = @student.name
@@ -58,7 +68,23 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :heritage, :status, :patronus, klass_ids: [])
-    #left out age and pet for now
+    params.require(:student).permit(:name, :heritage, :status, :patronus, :trait, klass_ids: [])
+    #left out pet for now
   end
+
+  def sort_student(student)
+    student.traits_by_house.each do |house, trait|
+      if student_params[:trait] == trait
+        byebug  
+        student.house = House.find_by(name: house)
+        student.house_id = student.house.id
+      else
+        student.house_id = rand(1..4)
+        student.house = House.find_by_id(student.house_id)
+      end
+    end
+  end
+
+
+
 end
