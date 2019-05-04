@@ -1,6 +1,8 @@
 <div class="subheader"><h2>Hogwart's Houses</h2></div>
-<br>
+
+<div class="houses">
 <% @houses.each do |house| %>
   <h3><%= link_to house.name, house_path(house) %></h3>
-  <h4><%= house.description %></h4><br><br>
+  <p><%= house.description %></p>
 <% end %>
+</div>
