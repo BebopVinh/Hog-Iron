@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 #FRONT-END
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 
 group :development, :test do

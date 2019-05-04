@@ -1,45 +1,60 @@
-<!--
-<div style="margin-left: 400px">
-</div>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hog-Iron</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<head>
+    <title>Hog-Iron</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
 </head>
 
 <body>
-<header>
-  <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" width=8%>
-  <h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1>
-</header>
+  <header>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" class="img-fluid mx-auto d-block" width="50%">
+      </div>
+      <div class="col-sm-8">
+        <h1 style="font-family:parry-hotter; color:gold; text-align:center;">Hog-Iron School of Witchcraft and Wizardry</h1>
+      </div>
+    </div>
+  </header>
 
-<nav>
-  <h4><%= link_to "Enroll", signup_path, class: 'nav_element' %></h4>
-  <h4><%= link_to "Login", login_path, class: 'nav_element'  %></h4>
-  <h4><%= link_to "Students", students_path, class: 'nav_element'  %></h4>
-  <h4><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></h4>
-  <h4><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></h4>
-  <h4><%= link_to "Courses", klasses_path, class: 'nav_element'  %></h4>
-  <h4><%= link_to "Houses", houses_path, class: 'nav_element'  %></h4>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><li><%= link_to "Home", hogwarts_path %></li>
+
+          <li><%= link_to "Students", students_path, class: 'nav_element'  %></li>
+          <li><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></li>
+          <li><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></li>
+          <li><%= link_to "Courses", klasses_path, class: 'nav_element'  %></li>
+          <li><%= link_to "Houses", houses_path, class: 'nav_element'  %></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Login", login_path, class: 'nav_element'  %></li>
+          <li><%= link_to "Enroll", signup_path, class: 'nav_element' %></li>
+        </ul>
+      </div>
+    </nav>
 
 
-
-
-  <!-- House dropdown -->
-</nav>
-
-
-<div class="container-fluid">
-    <%= yield %>
-</div>
+      <div class="container">
+        <%= yield %>
+      </div>
 
 </body>
 </html>
