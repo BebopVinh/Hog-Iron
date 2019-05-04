@@ -21,23 +21,21 @@ class Student < ApplicationRecord
    end
 
    def self.heritages
-     @heritages = %w(Pure-Blood Half-Blood Muggle-Born Squib Muggle)
+     @heritages = %w(Wizard-Born Half-Blood Muggle-Born Irrelevant)
    end
 
    def traits_by_house
      @traits_by_house = {
-        gryffindor: ["Brave", "Chivalrous"],
-        slytherin: ["Ambitious", "Cunning", "Shrewd"],
-        ravenclaw: ["Academic", "Intellectual"],
-        hufflepuff: ["Hard Working", "Loyal"]
+        Gryffindor: ["Brave", "Chivalrous"],
+        Slytherin: ["Ambitious", "Cunning", "Shrewd"],
+        Ravenclaw: ["Academic", "Intellectual"],
+        Hufflepuff: ["Hard Working", "Loyal"]
       }
     end
 
     def all_traits
       @all_traits = traits_by_house.values.flatten
     end
-
-
 
    def status?
       !!self.status ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."

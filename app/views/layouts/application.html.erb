@@ -17,44 +17,29 @@
   </head>
 </head>
 
+
 <body>
-  <header>
-    <div class="row">
-      <div class="col-sm-4">
-        <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" class="img-fluid mx-auto d-block" width="50%">
-      </div>
-      <div class="col-sm-8">
-        <h1 style="font-family:parry-hotter; color:gold; align-self:center">Hog-Iron School of Witchcraft and Wizardry</h1>
-      </div>
-    </div>
-  </header>
+<header>
+  <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" width=8%>
+  <h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1>
+</header>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><li><%= link_to "Home", hogwarts_path %></li>
-
-          <li><%= link_to "Students", students_path%></li>
-          <li><%= link_to "Admissions", new_student_path%></li>
-          <li><%= link_to "Faculty", teachers_path%></li>
-          <li><%= link_to "Courses", klasses_path%></li>
-          <li><%= link_to "Houses", houses_path%></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= login_logout %></li>
-          <li><%= link_to "Enroll", signup_path, class: "glyphicon glyphicon-user"%></li>
-        </ul>
-      </div>
-    </nav>
+<nav>
+  <h4><%= link_to "Enroll", signup_path, class: 'nav_element' %></h4>
+  <h4><%= link_to "Login", login_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Students", students_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Courses", klasses_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Houses", houses_path, class: 'nav_element'  %></h4>
+</nav>
 
 
-      <div class="container bg-dark">
-        <%= yield %>
-      </div>
+
+<div class="container-fluid">
+    <%= yield %>
+</div>
+
 
 </body>
 </html>
