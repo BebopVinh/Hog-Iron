@@ -1,6 +1,15 @@
 <div class="subheader"><h2>Hogwart's Houses</h2></div>
 <br>
-<% @houses.each do |house| %>
-  <h3><%= link_to house.name, house_path(house) %></h3>
-  <h4><%= house.description %></h4><br><br>
-<% end %>
+<div class="container-fluid row">
+  <% @houses.each do |house| %>
+    <div class="col-sm-3 d-flex flex-row">
+    <h3 class="text-center">
+      <a href="<%=house_path(house)%>">
+        <img src="<%=house_img(house)%>" class="center" style="max-width:auto; max-height:300px">
+        <br>
+        <%= house.name %>
+      </a>
+    </h3>
+    </div>
+  <% end %>
+</div>
