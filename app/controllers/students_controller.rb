@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by_id(params[:id])
-    @student_classes_route = "#{student_path(@student)}/classes"}
+    @student_classes_route = "#{student_path(@student)}/classes"
     @house = @student.house
     flash[:notice] = "Accio .... "
   end
@@ -68,18 +68,21 @@ class StudentsController < ApplicationController
   end
 
   def sort_student(student)
-    student.traits_by_house.each do |house, trait|
-      if student_params[:trait] == trait
-        student.house = House.find_by(name: house)
-        student.house_id = student.house.id
-      else
-        student.house_id = rand(1..4)
-        student.house = House.find_by_id(student.house_id)
+    student.traits_by_house.each do |house, traits|
+      #binding.pry
+      if traits.include?(student_params[:trait])
+        student.house_id = House.find_by(name: house.to_s).id
+        student.save
       end
-      flash[:notice] = "It's another one for ...#{@student.house.name}!!"
     end
+
+    if student_params[:trait] == nil
+      student.house_id = rand(1..4)
+      student.save
+    end
+
+    flash[:success] = "It's another one for ...#{@student.house.name}!!"
+
   end
-
-
 
 end

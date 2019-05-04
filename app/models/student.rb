@@ -26,10 +26,10 @@ class Student < ApplicationRecord
 
    def traits_by_house
      @traits_by_house = {
-        gryffindor: ["Brave", "Chivalrous"],
-        slytherin: ["Ambitious", "Cunning", "Shrewd"],
-        ravenclaw: ["Academic", "Intellectual"],
-        hufflepuff: ["Hard Working", "Loyal"]
+        Gryffindor: ["Brave", "Chivalrous"],
+        Slytherin: ["Ambitious", "Cunning", "Shrewd"],
+        Ravenclaw: ["Academic", "Intellectual"],
+        Hufflepuff: ["Hard Working", "Loyal"]
       }
     end
 
