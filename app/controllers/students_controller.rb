@@ -13,8 +13,8 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.valid?
       @student.save
-      flash[:notice] = "Welcome to Hogwarts, #{@student.name}!"
-      render :sorting_hat
+      flash[:success] = "Welcome to Hogwarts, #{@student.name}!"
+      render :sorting_hat, layout: false
     else
       flash[:alert] = @student.errors.full_messages
       render :new
@@ -39,7 +39,7 @@ class StudentsController < ApplicationController
     end
 
     if @student.update(student_params)
-      flash[:notice] = "Successfully updated #{@student.name}!"
+      flash[:success] = "Successfully updated #{@student.name}!"
       redirect_to student_path(@student)
     else
       flash[:alert] = @student.errors.full_messages
@@ -76,7 +76,7 @@ class StudentsController < ApplicationController
         student.house_id = rand(1..4)
         student.house = House.find_by_id(student.house_id)
       end
-      flash[:notice] = "It's another one for ...#{@student.house.name}!!"
+      flash[:success] = "It's another one for ...#{@student.house.name}!!"
     end
   end
 

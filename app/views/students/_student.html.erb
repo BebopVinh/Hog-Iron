@@ -1,4 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .white-box {
+        width: 400px;
+        height: 800px;
+        margin-left: 700px;
+        background: rgba(255,255,255,0.9);
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
 
+    <div class="white-box">
+      <% if flash[:alert] %>
+        <div class="alert" style="color:red">
+          <ul>
+           <% flash[:alert].each do |alert| %>
+            <li><%= alert %></li>
+           <% end %>
+          </ul>
+         </div>
+       <% end %>
 
 <h1><%=s.name%> </h1>
 <ul>

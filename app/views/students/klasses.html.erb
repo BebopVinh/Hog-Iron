@@ -1,10 +1,16 @@
-<h1><%= @student.name %>'s Class Schedule </h1>
-<h3>Add or drop classes here</h3>
-<br>
-<h5>Warning: Time Turners are longer be available; don't sign up for too many classes!</h5>
-<br>
-<%= form_for @student do |f| %>
-  <%= f.label :klass_ids, "Classes" %>
-  <%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name %><br>
-  <%= f.submit "Update Class Schedule"%>
-<% end %>
+
+<div style="text-align:center">
+
+
+  <h1><%= @student.name %>'s Class Schedule </h1>
+  <h3>Add or drop classes here</h3>
+  <br>
+  <h5>Warning: Time Turners are longer be available; don't sign up for too many classes!</h5>
+  <br>
+  <%= form_for @student do |f| %>
+    <%= f.label :klass_ids, "Classes" %>
+    <%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name %><br>
+    <%= f.submit "Update Class Schedule"%>
+  <% end %>
+
+</div>
