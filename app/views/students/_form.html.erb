@@ -8,21 +8,19 @@
    </div>
  <% end %>
 
- <p>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
+ <p style>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
 
 <%= form_for student do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br><br>
   <%= f.label :heritage %>
-  <%= f.select :heritage, Student.heritages %>
+  <%= f.select :heritage, Student.heritages, include_blank: true %>
   <br><br>
-  <br><br>need to add pet id or nested form for new pet<br><br>
-
-  <%= f.label :patronus %>
+  <%= f.label :patronus, "Patronus, if known" %>
   <%= f.text_field :patronus %>
   <br><br>
-  <%= f.label :graduation_year, "Class of:" %>
+  <%= f.label :graduation_year, "Class of" %>
   <%= f.text_field :graduation_year %>
   <br><br>
   <%= f.label :status, "Alive at End of Book Series?" %>

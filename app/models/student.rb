@@ -5,8 +5,8 @@ class Student < ApplicationRecord
   has_many :klasses, through: :student_klasses
   validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
   validates :heritage, presence: true
-  validates :username, presence: true, uniqueness: true
-  has_secure_password
+  # validates :username, presence: true, uniqueness: true
+  # has_secure_password
 
    def teacher(klass)
      klass.teacher
@@ -21,7 +21,7 @@ class Student < ApplicationRecord
    end
 
    def self.heritages
-     @heritages = %w(Pure-Blood Half-Blood Muggle-Born Squib Muggle)
+     @heritages = %w(Wizard-Born Half-Blood Muggle-Born Irrelevant)
    end
 
    def traits_by_house
