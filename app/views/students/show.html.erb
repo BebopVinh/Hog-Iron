@@ -1,9 +1,10 @@
 
-  <% if flash[:notice] %>
-   <div class="notice">
-     <font size="60" color="purple"><%= flash[:notice] %></font></div>
- <% end %>
+<% if flash[:notice] %>
+ <div class="notice">
+   <font size="60" color="purple"><%= flash[:notice] %></font></div>
+<% end %>
 
+<img_src= "<%= @student.image_url %>" alt="picture of <%= @student.name %>">
 <%= render partial: 'student', locals: { s: @student, house: @house }%>
 
 

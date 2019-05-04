@@ -1,36 +1,56 @@
-<% if flash[:alert] %>
-  <div class="alert" style="color:red">
-    <ul>
-     <% flash[:alert].each do |alert| %>
-      <li><%= alert %></li>
-     <% end %>
-    </ul>
-   </div>
- <% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .white-box {
+        width: 400px;
+        height: 800px;
+        margin-top: 20px;
+        margin-left: 700px;
+        background: rgba(255,255,255,0.9);
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
 
- <p style>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
+    <div class="white-box">
+      <% if flash[:alert] %>
+        <div class="alert" style="color:red">
+          <ul>
+           <% flash[:alert].each do |alert| %>
+            <li><%= alert %></li>
+           <% end %>
+          </ul>
+         </div>
+       <% end %>
 
-<%= form_for student do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br><br>
-  <%= f.label :heritage %>
-  <%= f.select :heritage, Student.heritages, include_blank: true %>
-  <br><br>
-  <%= f.label :patronus, "Patronus, if known" %>
-  <%= f.text_field :patronus %>
-  <br><br>
-  <%= f.label :graduation_year, "Class of" %>
-  <%= f.text_field :graduation_year %>
-  <br><br>
-  <%= f.label :status, "Alive at End of Book Series?" %>
-  <%= f.check_box :status %>
-  <br><br>
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
-  <br><br>
+     <p style>Which house you wonder? After you enroll, the Sorting Hat will assign you!</p>
 
+      <%= form_for student do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br>
+        <%= f.label :heritage %>
+        <%= f.select :heritage, Student.heritages, include_blank: true %>
+        <br>
+        <%= f.label :patronus, "Patronus, if known" %>
+        <%= f.text_field :patronus %>
+        <br>
+        <%= f.label :graduation_year, "Class of" %>
+        <%= f.text_field :graduation_year %>
+        <br>
+        <%= f.check_box :status %>
+        <%= f.label :status, "Alive at End of Book Series?" %>
+        <br>
+        <%= f.label :bio %>
+        <%= f.text_area :bio %>
+        <br><br>
+        <%= f.submit %>
+      <% end %>
 
-  <br><br>
-  <%= f.submit %>
-<% end %>
+    </div>
+  </body>
+</html>
