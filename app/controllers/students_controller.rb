@@ -52,6 +52,10 @@ class StudentsController < ApplicationController
     @klasses = @student.klasses
   end
 
+  def sorting_hat
+    @student = Student.find(params[:id])
+  end
+
   def destroy
     @student = Student.find(params[:id])
     @name = @student.name
@@ -84,5 +88,4 @@ class StudentsController < ApplicationController
     flash[:success] = "It's another one for ...#{@student.house.name}!!"
 
   end
-
 end

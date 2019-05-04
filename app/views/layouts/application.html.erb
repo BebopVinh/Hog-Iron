@@ -1,18 +1,20 @@
-<!--
-<div style="margin-left: 400px">
-</div>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hog-Iron</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<head>
+    <title>Hog-Iron</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
 </head>
 
 
@@ -30,11 +32,6 @@
   <h4><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></h4>
   <h4><%= link_to "Courses", klasses_path, class: 'nav_element'  %></h4>
   <h4><%= link_to "Houses", houses_path, class: 'nav_element'  %></h4>
-
-
-
-
-  <!-- House dropdown -->
 </nav>
 
 
@@ -42,6 +39,7 @@
 <div class="container-fluid">
     <%= yield %>
 </div>
+
 
 </body>
 </html>
