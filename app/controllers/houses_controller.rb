@@ -1,6 +1,8 @@
 class HousesController < ApplicationController
+
   def index
     @houses = House.all
+        render layout: 'application'
   end
 
   def show
