@@ -11,7 +11,10 @@ module StudentsHelper
      if student.house
        link_to student.house.name, house_path(student.house)
      else
-       "Please go to the sorting hat to find your house. (Add link/view)"
+       "Please go to the Sorting Hat to be assigned to a House."
+       render :'/students/sorting_hat'
      end
    end
+
+
 end

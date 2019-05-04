@@ -40,8 +40,9 @@ class KlassesController < ApplicationController
     redirect_to klasses_path
   end
 
-  def enroll
-  end
+  #works fine without this route?
+  # def enroll
+  # end
 
   private
 
