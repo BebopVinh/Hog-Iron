@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo:400,700');
+
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  background: url(../../images/Dark-Blue-Background.jpg) center no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+header {
+  width: 100%;
+  height: 7%;
+  position: relative;
+}
+
+header h1 a {
+  color: rgb(235, 230, 230);
+  font-family: 'Aleo', serif;
+  font-size: 1.25em;
+  width: 90%;
+  margin: 1%;
+  align: right;
+  text-decoration: none;
+  font-variant: small-caps;
+  float: left;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+}
+header h1 a:active {
+  color: inherit;
+}
+
+header img {
+  float: left;
+}
+nav {
+  width: 100%;
+  height: 5%;
+  position: relative;
+  top: 40px;
+  background-color: rgb(235, 230, 230);
+}
+
+.nav_element {
+  font-size: 1.1em;
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(235, 230, 230);
+  color: rgb(9, 53, 83);
+  border-style: solid;
+  border-width: auto;
+  border-color: rgb(235, 230, 230);
+  margin: 1%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  float: left;
+  position: relative;
+  top: -19px;
+}
+
+h2 {
+  color: rgb(235, 230, 230);
+  font-family: 'Aleo', serif;
+  font-size: 2em;
+  text-decoration: none;
+  font-variant: small-caps;
+}
+
+.subheader {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form {
+  width: 100%;
+  float: left;
+}

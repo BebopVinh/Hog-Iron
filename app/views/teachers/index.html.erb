@@ -1,4 +1,4 @@
-<h1>Our Teachers</h1>
+<div class="subheader"><h2>Our Teachers</h2></div>
 <ul>
   <% @teachers.each do |t| %>
     <li><%= link_to t.name, teacher_path(t) %>: <%= t.bio %> </li>
