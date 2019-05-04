@@ -9,13 +9,33 @@
   <title>Hog-Iron</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+<header>
+  <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" width=8%>
+  <h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1>
+</header>
+
+<nav>
+  <h4><%= link_to "Enroll", signup_path, class: 'nav_element' %></h4>
+  <h4><%= link_to "Login", login_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Students", students_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Courses", klasses_path, class: 'nav_element'  %></h4>
+  <h4><%= link_to "Houses", houses_path, class: 'nav_element'  %></h4>
+
+
+
+
+  <!-- House dropdown -->
+</nav>
+
 
 <div class="container-fluid">
     <%= yield %>
