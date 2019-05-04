@@ -5,8 +5,8 @@ class Student < ApplicationRecord
   has_many :klasses, through: :student_klasses
   validates :name, presence: { message: ": All wizards need names" }, uniqueness: { message: ": This wizard is already enrolled! "}
   validates :heritage, presence: true
-  # validates :username, presence: true, uniqueness: true
-  # has_secure_password
+  validates :username, presence: true, uniqueness: true
+  has_secure_password
 
    def teacher(klass)
      klass.teacher
@@ -36,8 +36,6 @@ class Student < ApplicationRecord
     def all_traits
       @all_traits = traits_by_house.values.flatten
     end
-
-
 
    def status?
       !!self.status ? "I'm sooo alive right now!!" : "I'm totally dead... RIP."
