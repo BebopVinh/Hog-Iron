@@ -13,13 +13,5 @@ class ApplicationController < ActionController::Base
 
   end
 
-  def logged_in?
-    !!current_user
-  end
 
-  def current_user
-    @current_user = Student.find_by_id(session[:user_id])
-  end
-
-  helper_method :current_user
 end
