@@ -1,11 +1,13 @@
-<h2><%= @house.name %></h2>
-<h3><%= @house.description%></h3>
+<div class="subheader"><h2><%= @house.name %></h2></div>
+<div class="house_show">
+<h2><%= @house.description%></h2>
 
 <h3>Head of House: <%= link_to @head_of_house_name, teacher_path(@head_of_house) %></h3>
 
 <h3>Students</h3>
 <ul>
 <% @house.students.each do |student| %>
-  <li><%= link_to student.name, student_path(student) %></li>
+  <li><p><%= link_to student.name, student_path(student) %></p></li>
 <% end %>
 </ul>
+</div>

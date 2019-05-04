@@ -1,13 +1,16 @@
-<h1>Login to Your Hogwarts Wizard Portal</h1>
+<div class="subheader"><h2>Login to Your Hogwarts Wizard Portal</h2></div>
+<br>
 
+<div class="form">
 <%= form_tag(login_path, method: :post) do %>
-  <%= label_tag(:username) %>
-  <%= text_field_tag(:username) %>
+  <p><%= label_tag(:username) %>
+  <%= text_field_tag(:username) %></p>
   <br>
 
-  <%= label_tag(:password) %>
-  <%= password_field_tag(:password) %>
+  <p><%= label_tag(:password) %>
+  <%= password_field_tag(:password) %></p>
   <br>
   <%= submit_tag "Login"%>
 
-<% end %> 
+<% end %>
+</div>
