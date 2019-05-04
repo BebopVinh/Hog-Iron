@@ -15,7 +15,6 @@ class StudentsController < ApplicationController
       @student.save
       flash[:notice] = "Welcome to Hogwarts, #{@student.name}!"
       render :sorting_hat
-      #redirect_to student_path(@student)
     else
       flash[:alert] = @student.errors.full_messages
       render :new
@@ -24,7 +23,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by_id(params[:id])
-    @student_classes_route = "#{student_path(@student)}/classes"
+    @student_classes_route = "#{student_path(@student)}/classes"}
     @house = @student.house
     flash[:notice] = "Accio .... "
   end
@@ -51,10 +50,6 @@ class StudentsController < ApplicationController
   def klasses
     @student = Student.find(params[:id])
     @klasses = @student.klasses
-  end
-
-  def sorting_hat
-    @student = Student.find(params[:id])
   end
 
   def destroy
