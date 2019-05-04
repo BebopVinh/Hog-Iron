@@ -1,5 +1,7 @@
-<h1>Sorting Hat</h1>
 
+<img src="https://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2014/12/sortinghat.jpg" alt="sorting_hat" alt="sorting_hat">
+
+<h2>Sorting Hat</h2>
 
 <h3>Have a seat on the stool, <%= @student.name %>,</h3>
 <p>Oh, you may not think I'm pretty, But don't judge on what you see, I'll eat myself if you can find a smarter hat than me ... </p>
@@ -7,6 +9,9 @@
 <br>
 <%= form_for @student do |f| %>
   <h3>Which of these describes you?</h3>
-  <%= f.select :trait, @student.all_traits %>
+  <p>or leave it blank and soon you'll see ...</p>
+  <%= f.select :trait, @student.all_traits, include_blank: true %>
   <%= f.submit "Sort Me"%>
 <% end %>
+
+</div>
