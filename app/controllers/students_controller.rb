@@ -75,13 +75,13 @@ class StudentsController < ApplicationController
   def sort_student(student)
     student.traits_by_house.each do |house, trait|
       if student_params[:trait] == trait
-        byebug  
         student.house = House.find_by(name: house)
         student.house_id = student.house.id
       else
         student.house_id = rand(1..4)
         student.house = House.find_by_id(student.house_id)
       end
+      flash[:notice] = "It's another one for ...#{@student.house.name}!!"
     end
   end
 
