@@ -1,3 +1,13 @@
+<style>
+  body {
+  background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+</style>
+
+
 <% if flash[:alert] %>
   <div class="alert" style="color:red">
     <ul>
@@ -8,7 +18,7 @@
    </div>
  <% end %>
 
- <p style>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
+ <p>Which house you wonder? After you're enrolled, the Sorting Hat will assign you!</p>
 
 <%= form_for student do |f| %>
   <%= f.label :name %>
