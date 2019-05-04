@@ -84,7 +84,8 @@ h3 {
 }
 
 h3 a, h3 a:hover {
-  color: inherit;
+  color: rgb(235, 230, 230);
+  text-decoration: none;
 }
 
 p {
@@ -92,7 +93,18 @@ p {
   font-family: 'Arial', sans-serif;
   color: rgb(88, 118, 161);
 }
+
+p a {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
 .houses {
+  width: 100%;
+  text-align: center;
+}
+
+.house_show {
   width: 100%;
   text-align: center;
 }
