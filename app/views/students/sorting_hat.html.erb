@@ -1,34 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Sorting Hat</title>
-    <style>
-      body {
-        background-color: #efe1d5;
-        }
-    </style>
-  </head>
+<style>
+  body {
+  background: url(https://nerdist.com/wp-content/uploads/2017/08/Harry-potter1-disneyscreencaps.com-5582.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  }
 
-  <body>
+.panel-a {
+  background: rgb(245, 245, 245, 0.3)
+  /* need to change color of lettering */
+  }
 
-    <img src="https://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2014/12/sortinghat.jpg" alt="sorting_hat" alt="sorting_hat", opacity=0.5>
+</style>
 
-    <h2>Sorting Hat</h2>
+<div class="col-sm-12 d-flex flex-row">
+  <br><br>
+  <div class="container">
+    <div class="panel-a" text-black>
+      <div class="panel-body">
 
-    <h3>Have a seat on the stool, <%= @student.name %>,</h3>
-    <p>Oh, you may not think I'm pretty, But don't judge on what you see, I'll eat myself if you can find a smarter hat than me ... </p>
-
-    <br>
-    <%= form_for @student do |f| %>
-      <h3>Which of these describes you?</h3>
-      <p>or leave it blank and soon you'll see ...</p>
-      <%= f.select :trait, @student.all_traits, include_blank: true %>
-      <%= f.submit "Sort Me"%>
-    <% end %>
-
-  </div>
+        <div class="container-fluid row">
 
 
-  </body>
-</html>
+        <h2>Sorting Hat</h2>
+
+        <h2>Have a seat on the stool, <%= @student.name %>,</h2>
+        <h4>Oh, you may not think I'm pretty, But don't judge on what you see, I'll eat myself if you can find a smarter hat than me ... </h4>
+
+        <br>
+        <%= form_for @student do |f| %>
+          <h3>Which of these describes you?</h3>
+          <h4>or leave it blank and soon you'll see ...</h4>
+          <%= f.select :trait, @student.all_traits, include_blank: true %>
+          <%= f.submit "Sort Me"%>
+        <% end %>
+
+      </div>
