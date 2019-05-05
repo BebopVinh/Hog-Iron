@@ -4,21 +4,36 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.panel-a {
+
+  background: rgb(196, 218, 199, 0.1)
+  /* need to change color of lettering */
+}
+
+.body {
+  color: rgb(0,0,0)
+}
+
 </style>
 
+<div class="col-sm-3"></div>
+<div class="col-sm-9 d-flex flex-row">
 
+  <div class="container">
+    <div class="panel-a" text-black>
+      <div class="panel-body">
 
-<div class="subheader"><h2>Our Students</h2></div>
-<br>
-<div class="container-fluid row">
-  <% @houses.each do |house| %>
-    <br><br>
-    <div class="text-center">
-    <h2><%= link_to house.name, house_path(house) %></h2>
-    <% house.students.each do |student| %>
-      <h3><%= link_to student.name, student_path(student)%><he>
-    <% end %>
-  <% end %>
-
-  <%= button_to "New Student", new_student_path, method: :get %>
+      <div class="container-fluid row">
+        <% @houses.each do |house| %>
+          <br><br>
+          <div class="text-center">
+          <h2><%= link_to house.name, house_path(house) %></h2>
+          <% house.students.each do |student| %>
+            <h3><%= link_to student.name, student_path(student)%><he>
+          <% end %>
+        <% end %>
+      <div>
+    </div>
+  </div>
 </div>
