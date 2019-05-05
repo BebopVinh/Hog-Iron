@@ -1,13 +1,24 @@
+<style>
+  body {
+  background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+</style>
+
+
+
 <div class="subheader"><h2>Our Students</h2></div>
-
-<% @houses.each do |house| %>
-  <br><br>
-  <h3><%= link_to house.name, house_path(house) %></h3>
-  <% house.students.each do |student| %>
-    <p><%= link_to student.name, student_path(student)%><p>
+<br>
+<div class="container-fluid row">
+  <% @houses.each do |house| %>
+    <br><br>
+    <div class="text-center">
+    <h2><%= link_to house.name, house_path(house) %></h2>
+    <% house.students.each do |student| %>
+      <h3><%= link_to student.name, student_path(student)%><he>
+    <% end %>
   <% end %>
-<% end %>
 
-
-<%= button_to "New Student", new_student_path, method: :get %>
+  <%= button_to "New Student", new_student_path, method: :get %>
 </div>
