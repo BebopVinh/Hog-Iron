@@ -7,6 +7,7 @@
     <div class="panel-a" text-black>
       <div class="panel-body">
 
+      <div style="text-align:center">
         <div class="container-fluid row">
           <div class="subheader"><h2>About <%= @teacher.name %></h2></div>
 
@@ -16,12 +17,19 @@
           </div>
 
           <div class="classes">
-             <h3>Classes:</h3>
-             <ul>
+             <h3>
+               Classes<br>
                 <% @klasses.each do |klass| %>
-                  <li><h3><%= link_to klass.name, klass_path(klass) %></h3></li>
+                  <%= link_to klass.name, klass_path(klass) %>
                 <% end %>
-              </ul>
+             </h3>
           </div>
+        </div>
+
         <br><br>
         <h4><%= link_to "Back To Our Teachers", teachers_path %></h4>
+      </div>
+
+    </div>
+  </div>
+</div>
