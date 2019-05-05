@@ -1,7 +1,19 @@
-<div class="subheader"><h2>Our Teachers</h2></div>
-<ul>
-  <% @teachers.each do |t| %>
-    <li><%= link_to t.name, teacher_path(t) %>: <%= t.bio %> </li>
-    <br><br>
-  <% end %>
-</ul>
+<%= render 'layout' %>
+
+<div class="col-sm-12 d-flex flex-row">
+  <br><br>
+  <div class="container">
+    <div class="panel-a" text-black>
+      <div class="panel-body">
+
+        <div class="container-fluid row">
+          <div class="subheader"><h2>Our Teachers</h2></div>
+          <ul>
+            <% @teachers.each do |t| %>
+              <li>
+                <h2><%= link_to t.name, teacher_path(t) %>:</h2>
+                <h4><%= t.bio %></h4>
+              </li>
+              <br><br>
+            <% end %>
+          </ul>
