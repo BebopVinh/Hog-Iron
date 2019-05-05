@@ -15,24 +15,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <header>
-  <div class="col-sm-11"><h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1></div>
-  <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" width=8%>
+
 
   <!-- <div class="col-sm-12">
     <h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1>
   </div> -->
 
-    <nav>
-      <h4>
-      <div class="col-sm-2"><%= link_to "Enroll", signup_path, class: 'nav_element' %></div>
-      <div class="col-sm-2"><%= link_to "Students", students_path, class: 'nav_element'  %></div>
-      <div class="col-sm-2"><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></div>
-      <div class="col-sm-2"><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></div>
-      <div class="col-sm-2"><%= link_to "Courses", klasses_path, class: 'nav_element'  %></div>
-      <div class="col-sm-2"><%= link_to "Houses", houses_path, class: 'nav_element'  %></div>
-      <div class="col-sm-2"><%= link_to "Login", login_path, class: 'nav_element'  %></div>
-      </h4>
-    </nav>
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="col-sm-11"><h1><a href="/">Hogwarts School of Witchcraft and Wizardry</a></h1></div>
+        <img src="../../images/Hogwartscrest.png" alt="Hogwarts Crest" width=8%>
+      <nav>
+        <h4>
+        <div class="col-sm-2"><%= link_to "Enroll", signup_path, class: 'nav_element' %></div>
+        <div class="col-sm-2"><%= link_to "Students", students_path, class: 'nav_element'  %></div>
+        <div class="col-sm-2"><%= link_to "Admissions", new_student_path, class: 'nav_element'  %></div>
+        <div class="col-sm-2"><%= link_to "Faculty", teachers_path, class: 'nav_element'  %></div>
+        <div class="col-sm-2"><%= link_to "Courses", klasses_path, class: 'nav_element'  %></div>
+        <div class="col-sm-2"><%= link_to "Houses", houses_path, class: 'nav_element'  %></div>
+        <div class="col-sm-2"><%= link_to "Login", login_path, class: 'nav_element'  %></div>
+        </h4>
+      </nav>
+    </div>
+  </div>
+</div>
+
 </header>
 
 <body>
