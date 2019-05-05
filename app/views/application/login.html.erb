@@ -1,16 +1,44 @@
-<div class="subheader"><h2>Login to Your Hogwarts Wizard Portal</h2></div>
-<br>
+<style media="screen">
+  body {
+    background: url(http://images.fandango.com/images/fandangoblog/hogwartsschoolpotter.jpg) no-repeat !important;
+    background-size: cover;
+  }
 
-<div class="form">
-<%= form_tag(login_path, method: :post) do %>
-  <p><%= label_tag(:username) %>
-  <%= text_field_tag(:username) %></p>
-  <br>
+  .panel {
+    background: rgb(0, 0, 0, 0.5)
+    /* need to change color of lettering */
+  }
 
-  <p><%= label_tag(:password) %>
-  <%= password_field_tag(:password) %></p>
-  <br>
-  <%= submit_tag "Login"%>
+  .panel-a {
+    background: rgb(196, 218, 199, 0.1)
+    /* need to change color of lettering */
+  }
 
-<% end %>
-</div>
+</style>
+
+
+<div class="col-sm-12 d-flex flex-row">
+
+  <div class="container">
+    <div class="panel-a" text-black>
+      <div class="panel-body">
+
+      <div class="container-fluid row">
+        <div style="color:darkblue"><h2>Login to Your Hogwarts Wizard Portal</h2></div>
+        <br>
+
+        <div class="form">
+        <%= form_tag(login_path, method: :post) do %>
+          <h4 style="color:darkblue"><%= label_tag(:username) %>
+          <%= text_field_tag(:username) %></h4>
+          <br>
+
+          <h4 style="color:darkblue"><%= label_tag(:password) %>
+          <%= password_field_tag(:password) %></h4>
+          <br>
+          <%= submit_tag "Login"%>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
