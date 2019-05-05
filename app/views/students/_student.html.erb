@@ -10,6 +10,7 @@
 <div class="col-sm-5 d-flex flex-row">
   <div class="subheader"><h2><%=s.name%> </h2></div>
   <ul>
+    <h4>
       <li>House: <%= display_house(s)%></li><br>
       <li>Heritage: <%= s.heritage %> </li><br>
       <li>Classes: <%= s.klasses_names %></li><br>
@@ -18,5 +19,6 @@
       <li>Graduates: <%= s.graduation_year %></li><br>
       <li>Alive at end of series? <%= s.status %> </li><br>
       <li>Bio: <%= s.bio %></li><br>
+    </h4>
   </ul>
 </div>
