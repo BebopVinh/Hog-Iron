@@ -24,16 +24,16 @@
       <div class="panel-body">
 
       <div class="container-fluid row">
-        <div style="color:darkblue"><h2>Login to Your Hogwarts Wizard Portal</h2></div>
+        <div style="color:midnightblue"><h2>Login to Your Hogwarts Wizard Portal</h2></div>
         <br>
 
         <div class="form">
         <%= form_tag(login_path, method: :post) do %>
-          <h4 style="color:darkblue"><%= label_tag(:username) %>
+          <h4 style="color:midnightblue"><%= label_tag(:username) %>
           <%= text_field_tag(:username) %></h4>
           <br>
 
-          <h4 style="color:darkblue"><%= label_tag(:password) %>
+          <h4 style="color:midnightblue"><%= label_tag(:password) %>
           <%= password_field_tag(:password) %></h4>
           <br>
           <%= submit_tag "Login"%>
