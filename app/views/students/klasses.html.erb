@@ -5,7 +5,7 @@
 <h4>Warning: Time Turners are longer be available; don't sign up for too many classes!</h4>
 <br>
 <%= form_for @student do |f| %>
-  <%= f.label :klass_ids, "Classes" %><br>
-  <%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name %><br>
+  <h2><%= f.label :klass_ids, "Classes" %></h2>
+  <h4><%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name %><h4><br>
   <%= f.submit "Update Class Schedule"%>
 <% end %>
