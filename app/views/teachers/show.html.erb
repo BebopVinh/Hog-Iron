@@ -1,17 +1,44 @@
-<div class="subheader"><h2>About <%= @teacher.name %></h2></div>
 
-<div>
-   <h3>Biography</h3>
-   <p><%= @teacher.bio %></p>
+<style>
+  body {
+  background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.panel-a {
+
+  background: rgb(228, 244, 222, 0.5)
+  /* need to change color of lettering */
+}
+</style>
+
+<div class="col-sm-12 d-flex flex-row">
+  <br><br>
+  <div class="container">
+    <div class="panel-a" text-black>
+      <div class="panel-body">
+
+        <div class="container-fluid row">
+          <div class="subheader"><h2>About <%= @teacher.name %></h2></div>
+
+          <div class="bio">
+             <h3>Biography</h3>
+             <h4><%= @teacher.bio %></h4>
+          </div>
+
+          <div class="classes">
+             <h3>Classes:</h3>
+             <ul>
+                <% @klasses.each do |klass| %>
+                  <li><h3><%= link_to klass.name, klass_path(klass) %></h3></li>
+                <% end %>
+              </ul>
+          </div>
+        <br><br>
+        <h4><%= link_to "Back To Our Teachers", teachers_path %></h4>
+        </div>
+      </div>
+    </<div>
+  </div>
 </div>
-
-<div>
-   <h3>Classes:</h3>
-     <ul>
-        <% @klasses.each do |klass| %>
-          <li><%= link_to klass.name, klass_path(klass) %></li>
-        <% end %>
-      </ul>
-</div>
-
-<%= link_to "Back To Our Teachers", teachers_path %>

@@ -30,7 +30,7 @@
           <div class="text-center">
           <h2><%= link_to house.name, house_path(house) %></h2>
           <% house.students.each do |student| %>
-            <h3><%= link_to student.name, student_path(student)%><he>
+            <h2><%= link_to student.name, student_path(student)%></h2>
           <% end %>
         <% end %>
       <div>
