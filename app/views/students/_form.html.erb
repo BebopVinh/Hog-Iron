@@ -8,7 +8,7 @@
 
 <div class="col-sm-7"></div>
 <div class="col-sm-5 d-flex flex-row">
-<h3 class="text-center">
+<h3 class="text-left">
   <% if flash[:alert] %>
     <div class="alert" style="color:red">
       <ul>
@@ -39,10 +39,7 @@
     <br><br>
     <%= f.label :bio %>
     <%= f.text_area :bio %>
-    <br><br>
-
-
-    <br><br>
+    <br>
     <%= f.submit %>
   <% end %>
 </h3>
