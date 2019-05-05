@@ -23,7 +23,6 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by_id(params[:id])
-    binding.pry
     @student_classes_route = "student_path(#{@student})/classes"
     @house = @student.house
     flash[:notice] = "Accio .... "
