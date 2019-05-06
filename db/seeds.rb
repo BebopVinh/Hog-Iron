@@ -12,6 +12,7 @@
 harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag", house_id:1, bio:"The boy who lived.")
 ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier", house_id:1)
 hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter", house_id:1)
+neville = Student.create(name: "Neville.Longbottom", heritage:"Wizard-Born", status:true, patronus:"", house_id:1)
 
 #slytherin
 malfoy = Student.create(name: "Draco Malfoy", heritage:"Wizard", status:true, patronus:"", house_id:2)
@@ -25,9 +26,9 @@ ernie = Student.create(name: "Ernie Macmillan", heritage:"Wizard", status:true, 
 justin = Student.create(name: "Justin Finch-Fletchley", heritage:"Wizard", status:true, patronus:"", house_id:3)
 
 #ravenclaw
-luna = Student.create(name: "Luna Lovegood", heritage:"Wizard", status:true, patronus:"", house_id:3)
-cho = Student.create(name: "Cho Chang", heritage:"Wizard", status:true, patronus:"", house_id:3)
-michael = Student.create(name: "Michael Corner", heritage:"Wizard", status:true, patronus:"", house_id:3)
+luna = Student.create(name: "Luna Lovegood", heritage:"Wizard", status:true, patronus:"", house_id:4)
+cho = Student.create(name: "Cho Chang", heritage:"Wizard", status:true, patronus:"", house_id:4)
+michael = Student.create(name: "Michael Corner", heritage:"Wizard", status:true, patronus:"", house_id:4)
 
 
 #pets
@@ -98,6 +99,9 @@ hufflepuff = House.create(name: "Hufflepuff", description:"home of the rest", te
 ravenclaw = House.create(name: "Ravenclaw", description:"home of the brains", teacher_id: 5)
 
 #Associations
-potions.students << [harry, ron, hermione]
+potions.students << [harry, ron, hermione, ]
 transfiguration.students << [harry, ron, hermione]
-herbology.students << [harry, ron, hermione]
+herbology.students << [harry, ron, hermione, cho]
+defense.students << [harry, ron, hermione, malfoy, crabbe, goyle]
+divination.students << [harry, ron]
+creatures.students << [harry, ron, hermione, malfoy, crabbe, goyle]
