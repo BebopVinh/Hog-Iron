@@ -1,18 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 
-#Students
+
+#Students #######################
 #gryffindor
 harry = Student.create(name: "Harry Potter", heritage:"Wizard", status:true, patronus:"Stag", house_id:1, bio:"The boy who lived.")
 ron = Student.create(name: "Ron Weasley", heritage:"Wizard", status:true, patronus:"Jack Russell Terrier", house_id:1)
 hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Born", status:true, patronus:"Otter", house_id:1)
-neville = Student.create(name: "Neville.Longbottom", heritage:"Wizard-Born", status:true, patronus:"", house_id:1)
+neville = Student.create(name: "Neville Longbottom", heritage:"Wizard-Born", status:true, patronus:"", house_id:1)
 
 #slytherin
 malfoy = Student.create(name: "Draco Malfoy", heritage:"Wizard", status:true, patronus:"", house_id:2)
@@ -85,12 +79,13 @@ remus = Teacher.create(
 
 #Klasses
 potions = Klass.create(name: "Potions", teacher_id: 1)
-transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
-herbology = Klass.create(name: "Herbology", teacher_id: 3)
-defense = Klass.create(name: "Defense Against the Dark Arts", teacher_id: 1)
-creatures = Klass.create(name: "Care of Magical Creatures", teacher_id: 6)
-divination = Klass.create(name: "Divination", teacher_id: 7)
-charms = Klass.create(name: "Charms", teacher_id: 5)
+transfiguration = Klass.create(name: "Transfiguration", description: "Learn to transform needles into matchboxes; porcupines into pincushions; mice into snuffboxes and (tsk tsk) fellow students into badgers.", teacher_id: 2)
+herbology = Klass.create(name: "Herbology", description: "Learn about the mysterious powers of plants including the dreadfully loud mandrake.", teacher_id: 3)
+defense = Klass.create(name: "Defense Against the Dark Arts", description: "Taught by a new teacher every year, this class will prepare you for everything from self-defense on the Quidditch field to absolute battle with Voldemort.", teacher_id: 1)
+creatures = Klass.create(name:"Care of Magical Creatures", description: "If you're nice to them, they will aide and abet your various escapes, if not .... you might end up in the hospital ward, or worse ...", teacher_id: 7)
+divination = Klass.create(name: "Divination", description: "Read tea leaves with a seer who sees almost nothing.", teacher_id: 8)
+charms = Klass.create(name: "Charms", description: "Modify objects - teach teacups to do cartwheels, feathers to float and more!", teacher_id: 5)
+flying = Klass.create(name: "Flying", description: "Time to learn to fly on a broom!", teacher_id: 6)
 
 #Houses
 gryffindor = House.create(name: "Gryffindor", description:"home of the brave", teacher_id: 2)
@@ -100,8 +95,8 @@ ravenclaw = House.create(name: "Ravenclaw", description:"home of the brains", te
 
 #Associations
 potions.students << [harry, ron, hermione, ]
-transfiguration.students << [harry, ron, hermione]
+transfiguration.students << [harry, ron, hermione, malfoy]
 herbology.students << [harry, ron, hermione, cho]
-defense.students << [harry, ron, hermione, malfoy, crabbe, goyle]
-divination.students << [harry, ron]
+defense.students << [harry, ron, hermione, malfoy, crabbe, goyle, justin]
+divination.students << [harry, ron, luna]
 creatures.students << [harry, ron, hermione, malfoy, crabbe, goyle]
