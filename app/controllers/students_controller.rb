@@ -67,14 +67,13 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :heritage, :status, :patronus, :trait, klass_ids: [])
+    params.require(:student).permit(:name, :heritage, :status, :patronus, :trait, :bio, :graduation_year, klass_ids: [])
     #left out pet for now
   end
 
   def sort_student(student)
     student.traits_by_house.each do |house, traits|
       if traits.include?(student_params[:trait])
-        binding.pry
         student.house_id = House.find_by(name: house.to_s).id
         student.save
       end
