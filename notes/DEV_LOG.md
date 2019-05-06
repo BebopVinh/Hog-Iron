@@ -4,14 +4,16 @@ https://hangouts.google.com/call/MDWhdAkIflfHtSf_RXsuAEEE
 link: https://learn.co/tracks/online*
 
 
-* Joan - Add sorting hat page
+* fix nav-bar
 * Add more Hogwartsian messages to controllers.
-
-FRONT-END STUFF
 * Branch your own copy and try styling with Bootstrap!
+
+
+###May 5th-6th
 * Add background images to other views
 
-
+###May 4th
+* DONE Add sorting hat page
 
 ###May 3rd
 * DONE Password Authentication
@@ -26,7 +28,6 @@ FRONT-END STUFF
 * DONE Changed student attributes
 * DONE All relationships working
 * DONE Student Helper method display_pet
-
 
 ### May 1st
 * Layouts
