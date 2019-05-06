@@ -73,8 +73,8 @@ class StudentsController < ApplicationController
 
   def sort_student(student)
     student.traits_by_house.each do |house, traits|
-      #binding.pry
       if traits.include?(student_params[:trait])
+        binding.pry
         student.house_id = House.find_by(name: house.to_s).id
         student.save
       end

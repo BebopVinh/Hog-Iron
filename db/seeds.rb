@@ -59,8 +59,12 @@ dumbledore = Teacher.create(
 
 flitwick = Teacher.create(
   name: "Filius Flitwick",
-  bio: "Flitwick is the head of Ravenclaw. He teaches charms, was once a champion at dueling and according to J.K. Rowling, has goblin heritage."")
-hooch = Teacher.create(name: "Rolanda Hooch", bio: "Madame Hooch teaches flying to first-years.")
+  bio: "Flitwick is the head of Ravenclaw. He teaches charms, was once a champion at dueling and according to J.K. Rowling, has goblin heritage.")
+
+hooch = Teacher.create(
+  name: "Rolanda Hooch",
+  bio: "Madame Hooch teaches flying to first-years."
+)
 
 hagrid = Teacher.create(
   name: "Rubeus Hagrid",
