@@ -8,7 +8,7 @@
       <div class="panel-body">
         <div class="container-fluid row">
           <div class="subheader" style="text-align:center"><h2>Classes</h2></div>
-          <% @klasses.each do |klass| %>
+          <% @klasses.sort_by(&:name).each do |klass| %>
              <%= render partial: 'klass', locals: {klass: klass} %>
           <% end %>
         </div>

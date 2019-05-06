@@ -21,11 +21,11 @@
       <div class="panel-body">
 
       <div class="container-fluid row">
-        <% @houses.each do |house| %>
+        <% @houses.sort_by(&:name).each do |house| %>
           <br><br>
           <div class="text-center">
           <h1><%= link_to house.name, house_path(house) %></h1>
-          <% house.students.each do |student| %>
+          <% house.students.sort_by(&:name).each do |student| %>
             <h4><%= link_to student.name, student_path(student)%></h4>
           <% end %>
         <% end %>

@@ -6,12 +6,9 @@
     <div class="panel-a" text-black>
       <div class="panel-body">
 
-        <div class="container-fluid row">
-          <div class="subheader" style="text-align:center"><h2>Our Teachers</h2></div>
-          <ul>
-            <% @teachers.each do |t| %>
+        <div class="container-fluid row" style="text-align:center">
+          <div class="subheader"><h2>Our Teachers</h2></div>
+            <% @teachers.sort_by(&:name).each do |t| %>
               <h2><%= link_to t.name, teacher_path(t) %></h2>
-              <h4><%= t.bio %></h4>
-              <br><br>
+              <br>
             <% end %>
-          </ul>

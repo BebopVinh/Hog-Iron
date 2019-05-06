@@ -6,6 +6,6 @@
 <br>
 <%= form_for @student do |f| %>
   <h2><%= f.label :klass_ids, "Classes" %></h2>
-  <h4><%= f.collection_check_boxes :klass_ids, Klass.all, :id, :name %><h4><br>
+  <h4><%= f.collection_check_boxes :klass_ids, Klass.all.sort_by(&:name), :id, :name %><h4><br>
   <%= f.submit "Update Class Schedule"%>
 <% end %>

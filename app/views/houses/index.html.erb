@@ -8,7 +8,7 @@
 <div class="subheader" style="text-align:center"><h2>Hogwarts Houses</h2></div>
 <br>
 <div class="container-fluid row">
-  <% @houses.each do |house| %>
+  <% @houses.sort_by(&:name).each do |house| %>
     <div class="col-sm-3 d-flex flex-row">
     <h3 class="text-center">
       <a href="<%=house_path(house)%>" class="col-sm-12">
