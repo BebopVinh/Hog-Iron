@@ -2,12 +2,11 @@
 
 
 <div class="col-sm-12">
-<br><br><br>
   <div class="container">
     <div class="panel-a" text-black>
       <div class="panel-body">
         <div class="container-fluid row">
-          <div class="subheader" style="text-align:center"><h2>Classes</h2></div>
+          <div class="subheader" style="text-align:center"><h6>Classes</h6></div>
           <% @klasses.sort_by(&:name).each do |klass| %>
              <%= render partial: 'klass', locals: {klass: klass} %>
           <% end %>
