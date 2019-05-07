@@ -7,6 +7,8 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    flash[:notice] = "Which house you wonder?
+    After you're enrolled, the Sorting Hat will assign you!"
   end
 
   def create
@@ -25,7 +27,7 @@ class StudentsController < ApplicationController
     @student = Student.find_by_id(params[:id])
     @student_classes_route = "student_path(#{@student})/classes"
     @house = @student.house
-    flash[:notice] = "Accio .... "
+    flash[:notice] = "Accio"
   end
 
   def edit
@@ -33,7 +35,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student = Student.find(params[:id])
+    @student = Student.find_by_id(params[:id])
     if @student.house_id == nil
       sort_student(@student)
     end

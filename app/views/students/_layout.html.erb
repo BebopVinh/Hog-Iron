@@ -1,25 +1,25 @@
 <style>
   body {
-  background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
+  background: url(https://i.pinimg.com/originals/08/e1/96/08e196b29fa7d964a9254f348c64f655.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   }
 
 .panel-a {
-  background: rgb(196, 218, 199, 0.1)
+  background: rgb(0, 0, 0, 0.4)
   /* need to change color of lettering */
   }
-
 </style>
 
-<div class="col-sm-7"></div>
-<div class="col-sm-5 d-flex flex-row">
-<h3 class="text-left">
+
+
+<div class="col-sm-12 d-flex flex-row">
+<h3 class="text-center">
   <% if flash[:alert] %>
     <div class="alert" style="color:red">
       <ul>
        <% flash[:alert].each do |alert| %>
-        <li><%= alert %></li>
+        <%= alert %><br>
        <% end %>
       </ul>
      </div>

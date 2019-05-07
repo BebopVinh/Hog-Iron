@@ -1,18 +1,21 @@
-<div class="col-sm-7"></div>
-<div class="col-sm-5 d-flex flex-row">
-    <% if flash[:notice] %>
-     <div class="notice">
-       <font size="60" color="purple"><%= flash[:notice] %></font></div>
-   <% end %>
- </div>
 
 
-<%= render partial: 'student', locals: { s: @student, house: @house }%>
+
+        <div class="col-sm-12 d-flex flex-row">
+         <% if flash[:notice] %>
+         <br><br><br>
+          <div class="notice" style="text-align:center">
+            <font size="60" color="lightgrey"><em><%= flash[:notice] %></em></font>
+          </div>
+        <% end %>
 
 
-<div class="col-sm-7"></div>
-<div class="col-sm-5 d-flex flex-row">
-  <%= button_to "Add or Drop Classes",  "#{student_path(@student)}/classes", method: :get%>
-  <%= button_to "Edit Student",  edit_student_path(@student), method: :get%>
-  <%= button_to "Delete Student",  student_path(@student), method: :delete%>
-</div>
+  <%= render partial: 'student', locals: { s: @student, house: @house }%>
+
+
+  <div class="col-sm-12 d-flex flex-row" style="color:black">
+    <br><br><br>
+    <%= button_to "Add or Drop Classes",  "#{student_path(@student)}/classes", method: :get%><br>
+    <%= button_to "Edit Student",  edit_student_path(@student), method: :get%><br>
+    <%= button_to "Delete Student",  student_path(@student), method: :delete%><br>
+  </div>

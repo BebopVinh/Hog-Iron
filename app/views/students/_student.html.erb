@@ -1,23 +1,24 @@
-<style>
-  body {background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-</style>
+<%= render 'layout' %>
 
-<div class="col-sm-7"></div>
-<div class="col-sm-5 d-flex flex-row">
-  <div class="subheader"><h2><%=s.name%> </h2></div>
-  <ul>
-    <h4>
-      <li>House: <%= display_house(s)%></li><br>
-      <li>Heritage: <%= s.heritage %> </li><br>
-      <li>Classes: <%= s.klasses_names %></li><br>
-      <li>Pet: <%= display_pet(s) %></li><br>
-      <li>Patronus: <%= s.patronus %> </li><br>
-      <li>Graduates: <%= s.graduation_year %></li><br>
-      <li>Alive at end of series? <%= s.status %> </li><br>
-      <li>Bio: <%= s.bio %></li><br>
-    </h4>
-  </ul>
+
+
+<div class="container">
+  <div class="panel-a" text-black>
+    <div class="panel-body">
+
+      <div class="col-sm-12 d-flex flex-row">
+        <div class="subheader"><h2><%=s.name%> </h2></div>
+          <h4>
+            House: <%= display_house(s)%><br><br>
+            Heritage: <%= s.heritage %><br><br>
+            Classes: <%= s.klasses_names %><br><br>
+            Pet: <%= display_pet(s) %><br><br>
+            Patronus: <%= s.patronus %><br><br>
+            Graduates: <%= s.graduation_year %><br><br>
+            Alive at end of series? <%= s.status %><br><br>
+            Bio: <%= s.bio %><br>
+          </h4>
+      </div>
+    </div>
+  </div>
 </div>
