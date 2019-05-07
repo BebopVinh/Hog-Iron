@@ -13,20 +13,5 @@ Rails 5 with devise and omniauth user table must be created through devise? 2yo
 https://www.youtube.com/watch?v=8DdlW-lzowA
 
 
-Joan's whitebox
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style media="screen">
-      .white-box {
-        width: 400px;
-        height: 800px;
-        margin-top: 20px;
-        margin-left: 700px;
-        background: rgba(255,255,255,0.9);
-        padding: 30px;
-      }
-    </style>
-  </head>
+https://images.blog.whsmith.co.uk/leadimage/hp-azkaban-illustrated.jpg
+knight bus
