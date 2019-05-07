@@ -2,30 +2,30 @@
 
 
 <div class="col-sm-12 d-flex flex-row">
-  <br><br>
+  <br>
   <div class="container">
     <div class="panel-a" text-black>
       <div class="panel-body">
 
       <div style="text-align:center">
         <div class="container-fluid row">
-          <div class="subheader"><h2>About <%= @teacher.name %></h2></div>
-
+          <div class="subheader"><h3>About</h3><h6 style="color:tan"> <%= @teacher.name %></h6></div>
+          <br><br>
           <div class="bio">
              <h3>Biography</h3>
-             <h4><%= @teacher.bio %></h4>
+             <h5><%= @teacher.bio %></h5>
           </div>
-
+          <br><br>
           <div class="classes">
-             <h3>Classes</h3>
+             <h2>Classes</h2>
               <% @klasses.each do |klass| %>
-                <h4><%= link_to klass.name, klass_path(klass) %></h4>
+                <h3><%= link_to klass.name, klass_path(klass), class: 'text_blue' %></h3>
               <% end %>
           </div>
         </div>
 
-        <br><br>
-        <h4><%= link_to "Back To Our Teachers", teachers_path %></h4>
+
+
       </div>
 
     </div>

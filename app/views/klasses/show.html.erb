@@ -9,25 +9,24 @@
         <div class="container-fluid row" style="text-align:center">
 
 
-          <div class="subheader"><h2><%= @klass.name %></h2></div><br>
+          <div class="subheader"><h6><%= @klass.name %></h6></div><br>
 
           <div>
-             <h3>Taught by: <%= link_to @teacher.name, teacher_path(@teacher) %><br><br>
+             <h3>Taught by: <%= link_to @teacher.name, teacher_path(@teacher), class: 'tan_text' %><br><br><br>
              Class Description: </h3>
-             <h4 style="color:grey"><%= @klass.description %></h4>
+             <h5><%= @klass.description %></h5>
           </div>
 
           <div>
             <br>
-             <h3>Students Enrolled</h3>
+             <h2>Students Enrolled</h2>
               <% @klass.students.each do |student| %>
-                <h4><%= link_to student.name, student_path(student) %></h4>
+                <h4 class="color:tan"><%= link_to student.name, student_path(student) %></h4>
               <% end %>
           </div>
+            <br>
+            <%= button_to "Enroll", "/klass/:student_id/enroll", method: :get %>
 
-          <div>
-             <%= button_to "Enroll", "/klass/:student_id/enroll", method: :get %>
-          </div>
         </div>
       </div>
     </div>

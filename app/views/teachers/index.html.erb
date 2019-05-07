@@ -1,10 +1,10 @@
 <%= render 'layout' %>
 
 <div class="col-sm-12 d-flex flex-row">
-  <br><br>
+  <br>
     <div class="panel-a" text-black>
       <div class="panel-body">
-        <div class="subheader"><h2>Our Teachers</h2></div>
+        <div class="subheader"><h1>Our Teachers</h1></div>
         <div class="container-fluid row" style="text-align:center">
           <br>
             <% @teachers.sort_by(&:name).each do |t| %>
