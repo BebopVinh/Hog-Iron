@@ -1,34 +1,24 @@
-<!-- why doesn't render 'layout' in erb tags work in lieu of style section here? -->
-<style>
-  body {
-  background: url(https://wallpaperaccess.com/full/541405.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
+<%= render 'layout' %>
 
-.panel-a {
-  background: rgb(196, 218, 199, 0.1)
-  /* need to change color of lettering */
-}
 
-</style>
 
-<div class="col-sm-3"></div>
-<div class="col-sm-9 d-flex flex-row">
+<div class="col-sm-12 d-flex flex-row">
 
   <div class="container">
     <div class="panel-a" text-black>
       <div class="panel-body">
 
       <div class="container-fluid row">
+        <div class="text-center">
+        <h1>Our Students</h1>
         <% @houses.sort_by(&:name).each do |house| %>
           <br><br>
-          <div class="text-center">
           <h1><%= link_to house.name, house_path(house) %></h1>
           <% house.students.sort_by(&:name).each do |student| %>
             <h4><%= link_to student.name, student_path(student)%></h4>
           <% end %>
         <% end %>
+        <br><br>
       <div>
     </div>
   </div>
