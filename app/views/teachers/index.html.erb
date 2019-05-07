@@ -2,14 +2,12 @@
 
 <div class="col-sm-12 d-flex flex-row">
   <br><br>
-  <div class="container">
     <div class="panel-a" text-black>
       <div class="panel-body">
-
+        <div class="subheader"><h2>Our Teachers</h2></div>
         <div class="container-fluid row" style="text-align:center">
-          <div class="subheader"><h1>Our Teachers</h1></div>
           <br>
             <% @teachers.sort_by(&:name).each do |t| %>
-              <h2><%= link_to t.name, teacher_path(t) %></h2>
+              <h2><%= link_to t.name, teacher_path(t), class: 'tan_text' %></h2>
               <br>
             <% end %>

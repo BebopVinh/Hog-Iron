@@ -1,16 +1,14 @@
 <div class="center" style="text-align:center">
-  <br><br>
+  <br><br>br
   <div class="subheader"><h2><%= @house.name %></h2></div>
   <div class="house_show">
-  <h2><%= @house.description%></h2><br>
+  <h3><%= @house.description%></h3><br>
 
-  <h3>Head of House: <%= link_to @head_of_house_name, teacher_path(@head_of_house) %></h3><br>
+  <h2>Head of House: <%= link_to @head_of_house_name, teacher_path(@head_of_house)%></h2><br>
 
-  <h3>Students</h3>
-  <ul>
+  <h2>Students</h2>
   <% @house.students.each do |student| %>
-    <h4><%= link_to student.name, student_path(student) %></h4>
+    <h3 style="text-align:center"><%= link_to student.name, student_path(student), class: 'blue_text' %></h3>
   <% end %>
-  </ul>
   </div>
 </div>
