@@ -6,7 +6,7 @@
   }
 
 .panel-a {
-  background: rgb(245, 245, 245, 0.3)
+  background: rgb(0, 0, 0, 0.4)
   /* need to change color of lettering */
   }
 
@@ -24,12 +24,12 @@
         <h2 class="text-center">Sorting Hat</h2><br>
 
         <h2>Have a seat on the stool, <%= @student.name %>,</h2>
-        <h4>Oh, you may not think I'm pretty, But don't judge on what you see, I'll eat myself if you can find a smarter hat than me ... </h4>
+        <h4 style="color:tan"><em>Oh, you may not think I'm pretty, But don't judge on what you see, I'll eat myself if you can find a smarter hat than me ... </em></h4>
 
         <br>
         <%= form_for @student do |f| %>
-          <h3>Which of these describes you?</h3>
-          <h4>or leave it blank and soon you'll see ...</h4>
+          <h3>Which of these best describes you?</h3>
+          <h4 style="color:tan"><em>or leave it blank and soon you'll see ...</em></h4>
           <%= f.select :trait, @student.all_traits, include_blank: true %>
           <%= f.submit "Sort Me"%>
         <% end %>

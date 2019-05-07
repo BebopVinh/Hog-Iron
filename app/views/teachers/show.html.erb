@@ -17,12 +17,10 @@
           </div>
 
           <div class="classes">
-             <h3>
-               Classes<br>
-                <% @klasses.each do |klass| %>
-                  <%= link_to klass.name, klass_path(klass) %>
-                <% end %>
-             </h3>
+             <h3>Classes</h3>
+              <% @klasses.each do |klass| %>
+                <h4><%= link_to klass.name, klass_path(klass) %></h4>
+              <% end %>
           </div>
         </div>
 
