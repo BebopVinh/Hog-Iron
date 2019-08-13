@@ -80,13 +80,11 @@ class StudentsController < ApplicationController
         student.save
       end
     end
-
-    if student_params[:trait] == nil
+    if student_params[:trait] == ""
       student.house_id = rand(1..4)
       student.save
     end
-
-    flash[:success] = "It's another one for ...#{@student.house.name}!!"
-
+    name = House.find(student.house_id).name
+    flash[:notice] = "It's another one for ...#{name}!!"
   end
 end
